@@ -14,7 +14,14 @@
         .playerWrapper {
             position: relative;
             padding-bottom: 56.25%;
+            background: rgba(255,182,193,0.3);
             height: 0;
+            margin: 0;
+        }
+        .fullscreen_div {
+            position: relative;
+            /*padding-bottom: 56.25%;*/
+            height: 100%;
             margin: 0;
         }
 
@@ -43,7 +50,7 @@
     </style>
 </head>
 <body>
-<div class="playerWrapper">
+<div id="playerWrapper" class="playerWrapper">
     <iframe id="child" src="https://v.kr.kollus.com/0qZmgZ2o?" allowfullscreen></iframe>
     <div id="overlay">
     </div>
@@ -78,9 +85,9 @@
             controller.set_controls_inactive_time(3);
 
             overlayManager.on('singletap', function (ev) {
+                console.log('SingleTap')
                 controller.set_controls_activity(true);
                 controller.set_controlbar_progress_only(false);
-
                 overlay.style.display = 'none';
                 setTimeout(function (){
                     if(isPlaying) {
@@ -90,8 +97,8 @@
                 }, 5000);
             });
             overlayManager.on('doubletap', function (ev) {
+                console.log('DoubleTap : ' + JSON.stringify(ev.center))
                 if(overlay.clientWidth/2 < ev.center.x){
-
                     controller.ff();
                 }
                 else {
@@ -121,6 +128,18 @@
             });
             controller.on('progress', function (percent, position, duration) {
                 isPlaying = true
+            });
+            controller.on('screenchange', function(screen){
+                var playerWrapper = document.getElementById('playerWrapper');
+                if(screen =='windowed'){
+                    // playerWrapper.classList.remove('fullscreen_div')
+                    // playerWrapper.classList.add('playerWrapper')
+                }
+                else if(screen =='fullscreen'){
+                    controller.set_screen();
+                    // playerWrapper.classList.remove('playerWrapper');
+                    // playerWrapper.classList.add('fullscreen_div')
+                }
             });
             controller.on('done', function () {
                 console.log('done')
