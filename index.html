@@ -57,6 +57,7 @@
     var controller;
     var isPlaying = false;
     window.onload = function () {
+        document.body.addEventListener('touchmove', function (e) { e.preventDefault() }, {passive: false})
         var overlay = document.getElementById('overlay');
 
         var overlayManager = new Hammer.Manager(overlay);
