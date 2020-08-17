@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="add .gitignore&#10;add getMotionPermission()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -68,8 +67,16 @@
       <option name="presentableId" value="Default" />
       <updated>1597650919538</updated>
       <workItem from="1597650921125" duration="2230000" />
-      <workItem from="1597653330610" duration="155000" />
+      <workItem from="1597653330610" duration="1004000" />
     </task>
+    <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
+      <created>1597653545313</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597653545313</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +93,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add .gitignore&#10;add getMotionPermission()" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .gitignore&#10;add getMotionPermission()" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="567" y="115" key="CommitChangelistDialog2" timestamp="1597653437764">
       <screen x="0" y="0" width="1920" height="1080" />
@@ -95,6 +106,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597653547912">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653547912" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -105,7 +120,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.html</url>
-          <line>27</line>
+          <line>46</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
