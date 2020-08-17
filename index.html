@@ -28,10 +28,9 @@
         }
 
         #overlay {
-            position: fixed;
-            display: block;
-            border: none;
-            height: 50%;
+            display: none;
+            position: absolute;
+            height: 100%;
             width: 100%;
             background: transparent;
             z-index: 9999;
@@ -41,38 +40,13 @@
             bottom: 0;
         }
 
-        #centerDiv {
-            position: relative;
-            width: 100%;
-            height: 80%;
-            margin-top: 10%;
-            display: flex;
-        }
-
-        #centerDiv button {
-            flex: 1;
-            background: transparent;
-            border: none;
-            font-size: 24pt;
-            color: white;
-        }
-
-        #centerDiv button:focus {
-            border: none;
-        }
     </style>
 </head>
 <body>
 <div class="playerWrapper">
-    <iframe id="child" src="https://v.kr.kollus.com/0qZmgZ2o?"></iframe>
+    <iframe id="child" src="https://v.kr.kollus.com/0qZmgZ2o?" allowfullscreen></iframe>
     <div id="overlay">
-        <div id="centerDiv">
-            <button id="btnRw"></button>
-            <button id="btnPlay"></button>
-            <button id="btnFF"></button>
-        </div>
     </div>
-
 </div>
 <span id="log"></span>
 
@@ -84,56 +58,50 @@
     var isPlaying = false;
     window.onload = function () {
         var overlay = document.getElementById('overlay');
-        var btnPlay = document.getElementById('btnPlay');
-        var btnRw = document.getElementById('btnRw');
-        var btnFF = document.getElementById('btnFF');
 
-        var dTapRwManager = new Hammer.Manager(btnRw);
-        var dTapFFManager = new Hammer.Manager(btnFF);
-        var singleTap = new Hammer.Tap({event: 'doubletap'});
+        var overlayManager = new Hammer.Manager(overlay);
+        var singleTap = new Hammer.Tap({event: 'singletap'});
         var doubleTap = new Hammer.Tap({event: 'doubletap',taps: 2});
         var tripleTap = new Hammer.Tap({event: 'doubletap',taps: 3});
-        dTapRwManager.add([tripleTap, doubleTap, singleTap]);
+        overlayManager.add([tripleTap, doubleTap, singleTap]);
         tripleTap.recognizeWith([doubleTap, singleTap]);
         doubleTap.recognizeWith([singleTap]);
         doubleTap.requireFailure(tripleTap);
         singleTap.requireFailure([tripleTap, doubleTap]);
-        dTapFFManager.add(doubleTap);
+
         try {
 
             controller = new VgControllerClient({
                 target_window: document.getElementById('child').contentWindow
             });
+            controller.set_controls_inactive_time(3);
 
-            btnPlay.onclick = function () {
-                if (isPlaying) {
-                    controller.pause();
-                } else {
-                    controller.play();
+            overlayManager.on('singletap', function (ev) {
+                controller.set_controls_activity(true);
+                controller.set_controlbar_progress_only(false);
+
+                overlay.style.display = 'none';
+                setTimeout(function (){
+                    if(isPlaying) {
+                        controller.set_controls_activity(false);
+                        overlay.style.display = 'block';
+                    }
+                }, 5000);
+            });
+            overlayManager.on('doubletap', function (ev) {
+                if(overlay.clientWidth/2 < ev.center.x){
+
+                    controller.ff();
                 }
-            };
-            dTapRwManager.on('singletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
-                controller.rw();
-            });
-            dTapRwManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
-                controller.rw();
-            });
-            dTapRwManager.on('tripletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
-                controller.rw();
-            });
-            dTapFFManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' +'ff: '+ ev.type + '</p>';
-                controller.ff();
-            });
+                else {
 
+                    controller.rw();
+                }
+            });
 
             controller.on('ready', function () {
                 console.log('ready');
                 controller.set_controls_activity(true);
-                controller.set_controlbar_progress_only(true);
                 overlay.style.display = 'none';
             });
             controller.on('error', function (error_code) {
@@ -141,39 +109,23 @@
             });
             controller.on('play', function () {
                 isPlaying = true
+                controller.set_controlbar_progress_only(true);
                 overlay.style.display = 'block';
             });
             controller.on('pause', function () {
                 isPlaying = false
+                controller.set_controlbar_progress_only(false);
             });
             controller.on('progress', function (percent, position, duration) {
                 isPlaying = true
             });
             controller.on('done', function () {
                 console.log('done')
-                isLive = false
             })
         } catch (e) {
             console.log(e);
         }
     }
-
-    var getMotionPermission = function () {
-        if (typeof (DeviceMotionEvent) !== "undefined"
-            && typeof (DeviceMotionEvent.requestPermission) == "function") {
-            DeviceMotionEvent.requestPermission().then(res => {
-                if (res === "granted") {
-                    window.addEventListener("devicemotion", handleOrientation, true);
-                }
-            }).catch(console.error);
-        } else {
-            console.log("Not Supported Device Motion");
-        }
-    }
-    var handleOrientation = function (event) {
-        console.log(event);
-    }
-
 </script>
 </body>
 </html>
