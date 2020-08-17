@@ -72,8 +72,9 @@
             <button id="btnFF"></button>
         </div>
     </div>
-    <span id="log"></span>
+
 </div>
+<span id="log"></span>
 
 <script type="text/javascript" src="https://file.kollus.com/vgcontroller/vg-controller-client.latest.min.js"></script>
 <script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
@@ -111,11 +112,11 @@
             };
 
             dTapRwManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>'+ev +'</p>'+ '<br/>'
+                document.getElementById('log').innerHTML += '<p>' + JSON.stringify(ev) + '</p>' + '<br/>'
                 controller.rw();
             });
             dTapFFManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>'+ev +'</p>'+ '<br/>'
+                document.getElementById('log').innerHTML += '<p>' + JSON.stringify(ev) + '</p>' + '<br/>'
                 controller.ff();
             });
 
