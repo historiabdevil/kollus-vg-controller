@@ -8,10 +8,27 @@
 <body>
 
 <script type="text/javascript">
-    var handleOrientation = function(event){
+    var getMotionPermission = function () {
+        if (typeof (DeviceMotionEvent) !== "undefined"
+            && typeof (DeviceMotionEvent.requestPermission) == "function") {
+            DeviceMotionEvent.requestPermission().then(res => {
+                if (res == "granted") {
+                    window.addEventListener("devicemotion", handleOrientation, true);
+                }
+            }).catch(console.error);
+
+        }
+        else {
+            console.log("Not Supported Device Motion");
+        }
+    }
+    var handleOrientation = function (event) {
         console.log(event);
     }
-    window.addEventListener("devicemotion", handleOrientation, true);
+    window.onload = () => {
+        getMotionPermission();
+    }
+
 </script>
 </body>
 </html>
