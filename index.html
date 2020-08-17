@@ -90,13 +90,15 @@
 
         var dTapRwManager = new Hammer.Manager(btnRw);
         var dTapFFManager = new Hammer.Manager(btnFF);
-        var DoubleTap = new Hammer.Tap({
-            event: 'doubletap',
-            taps: 2,
-            interval: 1000
-        });
-        dTapRwManager.add(DoubleTap);
-        dTapFFManager.add(DoubleTap);
+        var singleTap = new Hammer.Tap({event: 'doubletap'});
+        var doubleTap = new Hammer.Tap({event: 'doubletap',taps: 2});
+        var tripleTap = new Hammer.Tap({event: 'doubletap',taps: 3});
+        dTapRwManager.add([tripleTap, doubleTap, singleTap]);
+        tripleTap.recognizeWith([doubleTap, singleTap]);
+        doubleTap.recognizeWith([singleTap]);
+        doubleTap.requireFailure(tripleTap);
+        singleTap.requireFailure([tripleTap, doubleTap]);
+        dTapFFManager.add(doubleTap);
         try {
 
             controller = new VgControllerClient({
@@ -110,13 +112,20 @@
                     controller.play();
                 }
             };
-
+            dTapRwManager.on('singletap', function (ev) {
+                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
+                controller.rw();
+            });
             dTapRwManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' + JSON.stringify(ev) + '</p>' + '<br/>'
+                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
+                controller.rw();
+            });
+            dTapRwManager.on('tripletap', function (ev) {
+                document.getElementById('log').innerHTML += '<p>' +'rw: ' + ev.type + '</p>';
                 controller.rw();
             });
             dTapFFManager.on('doubletap', function (ev) {
-                document.getElementById('log').innerHTML += '<p>' + JSON.stringify(ev) + '</p>' + '<br/>'
+                document.getElementById('log').innerHTML += '<p>' +'ff: '+ ev.type + '</p>';
                 controller.ff();
             });
 
