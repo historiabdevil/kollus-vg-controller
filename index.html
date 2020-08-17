@@ -110,10 +110,12 @@
             });
             controller.on('play', function () {
                 isPlaying = true
+                console.log('play')
                 controller.set_controlbar_progress_only(true);
                 overlay.style.display = 'block';
             });
             controller.on('pause', function () {
+                console.log('pause')
                 isPlaying = false
                 controller.set_controlbar_progress_only(false);
             });
@@ -122,6 +124,9 @@
             });
             controller.on('done', function () {
                 console.log('done')
+                isPlaying = false
+                controller.set_controls_activity(true);
+                controller.set_controlbar_progress_only(false);
             })
         } catch (e) {
             console.log(e);

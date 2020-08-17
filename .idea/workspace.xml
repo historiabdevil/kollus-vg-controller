@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="initial css html, body">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +69,7 @@
       <updated>1597650919538</updated>
       <workItem from="1597650921125" duration="2230000" />
       <workItem from="1597653330610" duration="3098000" />
+      <workItem from="1597705816256" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
       <created>1597653545313</created>
@@ -115,6 +115,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add .gitignore&#10;add getMotionPermission()" />
