@@ -10,12 +10,14 @@
             margin: 0;
             padding: 0;
         }
+
         .playerWrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             margin: 0;
         }
+
         iframe {
             border: none;
             position: absolute;
@@ -24,6 +26,7 @@
             width: 100%;
             height: 100%;
         }
+
         #overlay {
             position: fixed;
             display: block;
@@ -37,6 +40,7 @@
             right: 0;
             bottom: 0;
         }
+
         #centerDiv {
             position: relative;
             width: 100%;
@@ -44,14 +48,16 @@
             margin-top: 10%;
             display: flex;
         }
-        #centerDiv button{
+
+        #centerDiv button {
             flex: 1;
             background: transparent;
             border: none;
             font-size: 24pt;
             color: white;
         }
-        #centerDiv button:focus{
+
+        #centerDiv button:focus {
             border: none;
         }
     </style>
@@ -66,6 +72,7 @@
             <button id="btnFF"></button>
         </div>
     </div>
+    <span id="log"></span>
 </div>
 
 <script type="text/javascript" src="https://file.kollus.com/vgcontroller/vg-controller-client.latest.min.js"></script>
@@ -88,26 +95,27 @@
             interval: 1000
         });
         dTapRwManager.add(DoubleTap);
-        dTapFFManager.add(DoubleTap)
-        ;        try {
+        dTapFFManager.add(DoubleTap);
+        try {
 
             controller = new VgControllerClient({
                 target_window: document.getElementById('child').contentWindow
             });
 
-            btnPlay.onclick = function(){
+            btnPlay.onclick = function () {
                 if (isPlaying) {
                     controller.pause();
-                }
-                else {
+                } else {
                     controller.play();
                 }
             };
 
-            dTapRwManager.on('doubletap', function(ev){
+            dTapRwManager.on('doubletap', function (ev) {
+                document.getElementById('log').innerHTML += '<p>'+ev +'</p>'+ '<br/>'
                 controller.rw();
             });
-            dTapFFManager.on('doubletap', function(ev){
+            dTapFFManager.on('doubletap', function (ev) {
+                document.getElementById('log').innerHTML += '<p>'+ev +'</p>'+ '<br/>'
                 controller.ff();
             });
 
@@ -148,8 +156,7 @@
                     window.addEventListener("devicemotion", handleOrientation, true);
                 }
             }).catch(console.error);
-        }
-        else {
+        } else {
             console.log("Not Supported Device Motion");
         }
     }
