@@ -18,6 +18,7 @@
             height: 0;
             margin: 0;
         }
+
         .playerWrapper:fullscreen {
             position: relative;
             padding-bottom: 0;
@@ -36,12 +37,25 @@
             z-index: auto;
         }
 
-        #overlay, #overlay:fullscreen {
+        #overlay {
             display: none;
             position: absolute;
             height: 100%;
             width: 100%;
             background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+            z-index: 2147483647;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #overlay:fullscreen {
+            display: none;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 0, 0, 0.7);
             z-index: 2147483647;
             top: 0;
             left: 0;
@@ -65,14 +79,16 @@
     var controller;
     var isPlaying = false;
     window.onload = function () {
-        document.body.addEventListener('touchmove', function (e) { e.preventDefault() }, {passive: false})
+        document.body.addEventListener('touchmove', function (e) {
+            e.preventDefault()
+        }, {passive: false})
         var overlay = document.getElementById('overlay');
 
 
         var overlayManager = new Hammer.Manager(overlay);
         var singleTap = new Hammer.Tap({event: 'singletap'});
-        var doubleTap = new Hammer.Tap({event: 'doubletap',taps: 2});
-        var tripleTap = new Hammer.Tap({event: 'doubletap',taps: 3});
+        var doubleTap = new Hammer.Tap({event: 'doubletap', taps: 2});
+        var tripleTap = new Hammer.Tap({event: 'doubletap', taps: 3});
         overlayManager.add([tripleTap, doubleTap, singleTap]);
         tripleTap.recognizeWith([doubleTap, singleTap]);
         doubleTap.recognizeWith([singleTap]);
@@ -91,8 +107,8 @@
                 controller.set_controls_activity(true);
                 controller.set_controlbar_progress_only(false);
                 overlay.style.display = 'none';
-                setTimeout(function (){
-                    if(isPlaying) {
+                setTimeout(function () {
+                    if (isPlaying) {
                         controller.set_controls_activity(false);
                         overlay.style.display = 'block';
                     }
@@ -100,10 +116,9 @@
             });
             overlayManager.on('doubletap', function (ev) {
                 console.log('DoubleTap : ' + JSON.stringify(ev.center))
-                if(overlay.clientWidth/2 < ev.center.x){
+                if (overlay.clientWidth / 2 < ev.center.x) {
                     controller.ff();
-                }
-                else {
+                } else {
 
                     controller.rw();
                 }
@@ -131,13 +146,12 @@
             controller.on('progress', function (percent, position, duration) {
                 isPlaying = true
             });
-            controller.on('screenchange', function(screen){
+            controller.on('screenchange', function (screen) {
                 var playerWrapper = document.getElementById('playerWrapper');
-                if(screen =='windowed'){
+                if (screen == 'windowed') {
                     // playerWrapper.classList.remove('fullscreen_div')
                     // playerWrapper.classList.add('playerWrapper')
-                }
-                else if(screen =='fullscreen'){
+                } else if (screen == 'fullscreen') {
                     // controller.set_screen();
                     // playerWrapper.classList.remove('playerWrapper');
                     // playerWrapper.classList.add('fullscreen_div')
