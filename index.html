@@ -27,7 +27,7 @@
             margin: 0;
         }
 
-        iframe {
+        .playerWrapper > iframe {
             border: none;
             position: absolute;
             top: 0;
@@ -35,6 +35,15 @@
             width: 100%;
             height: 100%;
             z-index: auto;
+        }
+        .playerWrapper:fullscreen  > iframe {
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-bottom: 56.25%;
+            width: 100%;
+            height: 0;
         }
 
         .overlay {
@@ -50,7 +59,7 @@
             bottom: 0;
         }
 
-        .overlay_fullscreen {
+        .playerWrapper:fullscreen > .overlay_fullscreen {
             display: none;
             position: absolute;
             height: 100%;
@@ -78,6 +87,7 @@
 
     var controller;
     var isPlaying = false;
+    var prev_screen = 'windowed';
     window.onload = function () {
         document.body.addEventListener('touchmove', function (e) {
             e.preventDefault()
@@ -149,16 +159,17 @@
             controller.on('screenchange', function (screen) {
                 var playerWrapper = document.getElementById('playerWrapper');
                 if (screen == 'windowed') {
-                    playerWrapper.classList.remove('playerWrapper_fullscreen')
-                    playerWrapper.classList.add('playerWrapper')
 
-                    overlay.classList.remove('overlay_fullscreen')
-                    overlay.classList.add('overlay')
                 } else if (screen == 'fullscreen') {
-                    playerWrapper.classList.add('playerWrapper_fullscreen')
-                    playerWrapper.classList.remove('playerWrapper')
-                    overlay.classList.add('overlay_fullscreen')
-                    overlay.classList.remove('overlay')
+                    if(prev_screen == 'windowed'){
+                        prev_screen = 'fullscreen';
+                        playerWrapper.requestFullscreen();
+                    }
+                    else {
+                        prev_screen = 'windowed';
+                        playerWrapper.exitFullscreen();
+                    }
+                    controller.set_screen();
                 }
             });
             controller.on('done', function () {
