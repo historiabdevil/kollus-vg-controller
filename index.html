@@ -64,12 +64,22 @@
             position: absolute;
             height: 100%;
             width: 100%;
-            background: rgba(255, 0, 0, 0.7);
+            background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
             z-index: 2147483647;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
+        }
+        #btn_full {
+            border: white 1px solid;
+            color: white;
+            background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            right: 3%;
+            bottom: 3%;
         }
 
     </style>
@@ -77,7 +87,9 @@
 <body>
 <div id="playerWrapper" class="playerWrapper">
     <iframe id="child" src="https://v.kr.kollus.com/0qZmgZ2o?" allowfullscreen playsinline></iframe>
-    <div id="overlay" class="overlay"></div>
+    <div id="overlay" class="overlay">
+        <button id="btn_full">Fullscreen</button>
+    </div>
 </div>
 <span id="log"></span>
 
@@ -93,7 +105,8 @@
             e.preventDefault()
         }, {passive: false})
         var overlay = document.getElementById('overlay');
-
+        var btnFull = document.getElementById('btn_full');
+        var playerWrapper = document.getElementById('playerWrapper');
 
         var overlayManager = new Hammer.Manager(overlay);
         var singleTap = new Hammer.Tap({event: 'singletap'});
@@ -133,6 +146,42 @@
                     controller.rw();
                 }
             });
+            /* View in fullscreen */
+            function openFullscreen() {
+                if (playerWrapper.requestFullscreen) {
+                    playerWrapper.requestFullscreen();
+                } else if (playerWrapper.mozRequestFullScreen) { /* Firefox */
+                    playerWrapper.mozRequestFullScreen();
+                } else if (playerWrapper.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    playerWrapper.webkitRequestFullscreen();
+                } else if (playerWrapper.msRequestFullscreen) { /* IE/Edge */
+                    playerWrapper.msRequestFullscreen();
+                }
+            }
+
+            /* Close fullscreen */
+            function closeFullscreen() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            }
+
+            btnFull.addEventListener('click', function (){
+                if(prev_screen == "windowed"){
+                    openFullscreen();
+                    prev_screen = "fullscreen";
+                }
+                else {
+                    closeFullscreen();
+                    prev_screen = "windowed";
+                }
+            });
 
             controller.on('ready', function () {
                 console.log('ready');
@@ -157,20 +206,21 @@
                 isPlaying = true
             });
             controller.on('screenchange', function (screen) {
-                var playerWrapper = document.getElementById('playerWrapper');
-                if (screen == 'windowed') {
-
-                } else if (screen == 'fullscreen') {
-                    if(prev_screen == 'windowed'){
-                        prev_screen = 'fullscreen';
-                        playerWrapper.requestFullscreen();
-                    }
-                    else {
-                        prev_screen = 'windowed';
-                        playerWrapper.exitFullscreen();
-                    }
-                    controller.set_screen();
-                }
+                // var playerWrapper = document.getElementById('playerWrapper');
+                // if (screen == 'windowed') {
+                //
+                // } else if (screen == 'fullscreen') {
+                //     controller.set_screen();
+                //     if(prev_screen == 'windowed'){
+                //         prev_screen = 'fullscreen';
+                //         playerWrapper.requestFullscreen();
+                //     }
+                //     else {
+                //         prev_screen = 'windowed';
+                //         playerWrapper.exitFullscreen();
+                //     }
+                //
+                // }
             });
             controller.on('done', function () {
                 console.log('done')
