@@ -19,7 +19,7 @@
             margin: 0;
         }
 
-        .playerWrapper:fullscreen {
+        .playerWrapper_fullscreen {
             position: relative;
             padding-bottom: 0;
             background: transparent;
@@ -37,7 +37,7 @@
             z-index: auto;
         }
 
-        #overlay {
+        .overlay {
             display: none;
             position: absolute;
             height: 100%;
@@ -50,7 +50,7 @@
             bottom: 0;
         }
 
-        #overlay:fullscreen {
+        .overlay_fullscreen {
             display: none;
             position: absolute;
             height: 100%;
@@ -68,7 +68,7 @@
 <body>
 <div id="playerWrapper" class="playerWrapper">
     <iframe id="child" src="https://v.kr.kollus.com/0qZmgZ2o?" allowfullscreen></iframe>
-    <div id="overlay"></div>
+    <div id="overlay" class="overlay"></div>
 </div>
 <span id="log"></span>
 
@@ -149,12 +149,16 @@
             controller.on('screenchange', function (screen) {
                 var playerWrapper = document.getElementById('playerWrapper');
                 if (screen == 'windowed') {
-                    // playerWrapper.classList.remove('fullscreen_div')
-                    // playerWrapper.classList.add('playerWrapper')
+                    playerWrapper.classList.remove('playerWrapper_fullscreen')
+                    playerWrapper.classList.add('playerWrapper')
+
+                    overlay.classList.remove('overlay_fullscreen')
+                    overlay.classList.add('overlay')
                 } else if (screen == 'fullscreen') {
-                    // controller.set_screen();
-                    // playerWrapper.classList.remove('playerWrapper');
-                    // playerWrapper.classList.add('fullscreen_div')
+                    playerWrapper.classList.add('playerWrapper_fullscreen')
+                    playerWrapper.classList.remove('playerWrapper')
+                    overlay.classList.add('overlay_fullscreen')
+                    overlay.classList.remove('overlay')
                 }
             });
             controller.on('done', function () {
