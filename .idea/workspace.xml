@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <updated>1597650919538</updated>
       <workItem from="1597650921125" duration="2230000" />
       <workItem from="1597653330610" duration="3098000" />
-      <workItem from="1597705816256" duration="8194000" />
+      <workItem from="1597705816256" duration="8437000" />
     </task>
     <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
       <created>1597653545313</created>
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597713538752</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="remove user-scalable">
+      <created>1597714439656</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597714439656</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,23 +198,24 @@
     <MESSAGE value="insert fake image for overlay div" />
     <MESSAGE value="add css for overlay div when fullscreen" />
     <MESSAGE value="change css for overlay div when fullscreen" />
-    <option name="LAST_COMMIT_MESSAGE" value="change css for overlay div when fullscreen" />
+    <MESSAGE value="remove user-scalable" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove user-scalable" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1597713537690">
+    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1597714438887">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
-    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1597713537690" />
+    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1597714438887" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1597653241028">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597713541410">
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597714441756">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1597713541410" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1597714441756" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

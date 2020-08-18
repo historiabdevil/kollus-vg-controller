@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
     <title>Kollus VG Controller Interface</title>
 
     <style type="text/css">
@@ -112,7 +112,7 @@
                         controller.set_controls_activity(false);
                         overlay.style.display = 'block';
                     }
-                }, 5000);
+                }, 3000);
             });
             overlayManager.on('doubletap', function (ev) {
                 console.log('DoubleTap : ' + JSON.stringify(ev.center))
@@ -166,6 +166,7 @@
                 isPlaying = false
                 controller.set_controls_activity(true);
                 controller.set_controlbar_progress_only(false);
+                overlay.style.display = 'none';
             })
         } catch (e) {
             console.log(e);
