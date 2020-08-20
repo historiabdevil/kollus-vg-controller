@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="add live">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/liveiframetest.html" beforeDir="false" afterPath="$PROJECT_DIR$/liveiframetest.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,8 @@
       <updated>1597650919538</updated>
       <workItem from="1597650921125" duration="2230000" />
       <workItem from="1597653330610" duration="3098000" />
-      <workItem from="1597705816256" duration="13963000" />
+      <workItem from="1597705816256" duration="14582000" />
+      <workItem from="1597887165300" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
       <created>1597653545313</created>
@@ -218,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597723357211</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="change fullscreen logic">
+      <created>1597723526805</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1597723526805</updated>
+    </task>
+    <task id="LOCAL-00023" summary="add liveiframetest.html">
+      <created>1597887261464</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1597887261464</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,23 +266,24 @@
     <MESSAGE value="add user-scalable&#10;set hide controlbar 3s&#10;hide overlay when play done" />
     <MESSAGE value="add iframe playsinline" />
     <MESSAGE value="change fullscreen logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="change fullscreen logic" />
+    <MESSAGE value="add liveiframetest.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="add liveiframetest.html" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1597723356400">
+    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1597887260480">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
-    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1597723356400" />
+    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1597887260480" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1597653241028">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597723360767">
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597887263350">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1597723360767" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1597887263350" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -278,7 +295,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.html</url>
           <line>169</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
