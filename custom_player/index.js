@@ -1,6 +1,7 @@
-var controller;
-var showTimeControlbar = 3; //seconds
+
 window.onload = function () {
+    var controller;
+    var showTimeControlbar = 3; //seconds
     document.cookie = "crossCookie=_ga; SameSite=None; Secure;"
     document.body.addEventListener('touchmove', function (e) {
         e.preventDefault()
