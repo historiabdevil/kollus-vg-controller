@@ -141,13 +141,13 @@
             });
             /* View in fullscreen */
             function openFullscreen() {
-                if (playerWrapper.requestFullscreen) {
+                if (playerWrapper.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    playerWrapper.webkitRequestFullscreen();
+                } else if (playerWrapper.requestFullscreen) {
                     playerWrapper.requestFullscreen();
                 } else if (playerWrapper.mozRequestFullScreen) { /* Firefox */
                     playerWrapper.mozRequestFullScreen();
-                } else if (playerWrapper.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-                    playerWrapper.webkitRequestFullscreen();
-                } else if (playerWrapper.msRequestFullscreen) { /* IE/Edge */
+                } else  if (playerWrapper.msRequestFullscreen) { /* IE/Edge */
                     playerWrapper.msRequestFullscreen();
                 }
             }
