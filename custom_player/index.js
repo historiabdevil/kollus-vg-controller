@@ -55,7 +55,7 @@ window.onload = function () {
         var ss = time - hour * 3600 - mm * 60;
         var strHour = hour >= 10 ? '' + hour : '0' + hour;
         var strmm = mm >= 10 ? '' + mm : '0' + mm;
-        var strss = ss >= 10 ? '' + ss : '0' + ss;
+        var strss = ss >= 10 ? '' + ss : ss < 0 ? '00': '0' + ss;
         if (hour > 0) {
             return strHour + ':' + strmm + ':' + strss;
         } else {
@@ -76,8 +76,7 @@ window.onload = function () {
                 document.querySelector('#play > i').classList.remove('fa-play-circle');
                 document.querySelector('#play > i').classList.add('fa-pause-circle');
             } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
-                hideAllControlbar();
-                controller.pause();
+                hideAllControlbar();                controller.pause();
                 hideControlbar();
                 document.querySelector('#play > i').classList.remove('fa-pause-circle')
                 document.querySelector('#play > i').classList.add('fa-play-circle')
