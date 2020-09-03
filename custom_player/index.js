@@ -55,10 +55,9 @@ window.onload = function () {
         var strHour = hour >= 10 ? '' + hour : '0' + hour;
         var strmm = mm >= 10 ? '' + mm : '0' + mm;
         var strss = ss >= 10 ? '' + ss : '0' + ss;
-        if(hour> 0){
+        if (hour > 0) {
             return strHour + ':' + strmm + ':' + strss;
-        }
-        else {
+        } else {
             return strmm + ':' + strss;
         }
 
@@ -67,20 +66,15 @@ window.onload = function () {
     try {
         showControlbar();
         // hideAllControlbar();
-        bind_evt("play", function(){
-            if(document.querySelector('#play > i').classList.contains('fa-play-circle') > 0){
+        bind_evt("play", function () {
+            if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
                 hideAllControlbar();
-                document.getElementById('player').focus();
-                document.getElementById('player').style.zIndex = 3;
-                setTimeout(function(){
-                    controller.play(1);
-                    controller.play();
-                    hideControlbar();
-                    document.querySelector('#play > i').classList.remove('fa-play-circle');
-                    document.querySelector('#play > i').classList.add('fa-pause-circle');
-                }, 1000);
-
-            }else if(document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0){
+                controller.play(1);
+                controller.play();
+                hideControlbar();
+                document.querySelector('#play > i').classList.remove('fa-play-circle');
+                document.querySelector('#play > i').classList.add('fa-pause-circle');
+            } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
                 hideAllControlbar();
                 controller.pause();
                 hideControlbar();
@@ -88,7 +82,7 @@ window.onload = function () {
                 document.querySelector('#play > i').classList.add('fa-play-circle')
             }
         })
-        bind_evt("ext_play", function(){
+        bind_evt("ext_play", function () {
             controller.play();
         });
 
