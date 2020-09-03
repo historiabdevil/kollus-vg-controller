@@ -1,0 +1,291 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+.normalWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.fullWrapper {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.pipWrapper {
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+}
+
+iframe {
+    position: absolute;
+    border: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+
+#controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+}
+
+#top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+}
+#setting {
+    position: absolute;
+    float: right;
+    right: 3px;
+}
+
+#center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#center > button {
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    color: white;
+
+}
+#bottom {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    line-height: 30px;
+}
+
+#progress {
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(33, 33, 33, 0.5);
+
+}
+
+#value_progress {
+    position: absolute;
+    left: 0px;
+
+    height: 100%;
+    background-color: red;
+    width: 30%;
+}
+
+#value_position {
+    position: absolute;
+    top: -2.5px;
+    left: 30%;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 5px 5px;
+}
+
+#buttons {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.2);
+    color: white;
+}
+
+#timelaps {
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    left: 3px;
+    width: 100px;
+}
+
+#buttons > div > button {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    margin-top: 3px;
+    padding: 0;
+}
+
+#buttons > div > button > i {
+    position: relative;
+    font-size: 24px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    margin: 0
+}
+
+#button_center {
+    position: absolute;
+    left: 103px;
+    margin-left: 3px;
+
+}
+#repeat {
+    float: left;
+    left: 3px;
+    width: 50px !important;
+}
+#repeat >span{
+    color: white;
+    font-size: 16px;
+}
+
+#button_right {
+    position: absolute;
+    float: right;
+    right: 3px;
+    line-height: 30px;
+    width: 200px;
+}
+
+#mute {
+    position: absolute;
+    float: left;
+    left: 3px;
+}
+
+#volume_outer {
+    position: relative;
+    float: left;
+    left: 5px;
+    top: 12.5px;
+    width: 50px;
+    height: 5px;
+    background: black;
+    margin-right: 5px;
+}
+
+#volume_inner {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background: red;
+}
+
+#volume_position {
+    position: absolute;
+    top: -2.5px;
+    left: 20%;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 5px 5px;
+}
+
+#fullscreen {
+    position: absolute;
+    float: right;
+}
+#pip {
+    position: absolute;
+    float: right;
+}
+
+
+#touchpannel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#setting_menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+

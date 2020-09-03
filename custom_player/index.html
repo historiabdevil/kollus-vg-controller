@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-US-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>Custom Player</title>
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+</head>
+<body>
+<div id="wrapper" class="normalWrapper">
+    <iframe id="player" src="http://v.kr.kollus.com/0qZmgZ2o?a&debug_mode"
+            allowfullscreen webkitallowfullscreen mozallowfullscreen playsinline>
+    </iframe>
+    <div id="controls">
+        <div id="center">
+                <button id="rw"><i class="fas fa-backward"></i></button>
+                <button id="play"><i class="far fa-play-circle"></i></button>
+                <button id="ff"><i class="fas fa-forward"></i></button>
+        </div>
+        <div id="top">
+            <span id="title">
+            </span>
+            <button id="setting"><i class="fas fa-ellipsis-v"></i></button>
+        </div>
+
+        <div id="bottom">
+            <div id="progress">
+                <div id="value_progress"></div>
+                <div id="value_position"></div>
+            </div>
+            <div id="buttons">
+                <div id="timelaps">
+                    <span id="current_time">00:00:00</span>
+                    <span> / </span>
+                    <span id="duration">00:00:00</span>
+                </div>
+                <div id="button_center">
+                    <button id="repeat">
+                        <span id="repeatA">A</span>
+                        <span id="repeatB">- B</span>
+                    </button>
+                </div>
+                <div id="button_right">
+                    <button id="mute"><i class="fas fa-volume-mute"></i></button>
+                    <div id="volume_outer">
+                        <div id="volume_inner"></div>
+                        <div id="volume_position"></div>
+                    </div>
+                    <button id="pip">PIP</button>
+                    <button id="fullscreen"><i class="fas fa-expand"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="touchpannel"></div>
+    <div id="setting_menu"></div>
+</div>
+<button id="ext_play">PLAY</button>
+<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"-->
+<!--        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>-->
+<script src="https://kit.fontawesome.com/1a3204681f.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://file.kollus.com/vgcontroller/vg-controller-client.latest.min.js"></script>
+<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<script src="index.js">
+</script>
+</div>
+</body>
+</html>
