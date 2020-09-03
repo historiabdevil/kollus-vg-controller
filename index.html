@@ -143,6 +143,9 @@
             function openFullscreen() {
                 if (playerWrapper.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
                     playerWrapper.webkitRequestFullscreen();
+                    if('windowed' == controller.get_screen()){
+                        controller.set_screen();
+                    }
                 } else if (playerWrapper.requestFullscreen) {
                     playerWrapper.requestFullscreen();
                 } else if (playerWrapper.mozRequestFullScreen) { /* Firefox */

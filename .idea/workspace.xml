@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="" />
+    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +58,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,6 +72,7 @@
       <workItem from="1597653330610" duration="3098000" />
       <workItem from="1597705816256" duration="14582000" />
       <workItem from="1597887165300" duration="7553000" />
+      <workItem from="1599113176574" duration="314000" />
     </task>
     <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
       <created>1597653545313</created>
@@ -350,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597903819702</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="change iframe size">
+      <created>1599113254127</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1599113254127</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,20 +398,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="change iframe size" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1597903818896">
+    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1599113253438">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
-    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1597903818896" />
+    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113253438" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1597653241028">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1597903823314">
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1599113264005">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1597903823314" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113264005" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -415,7 +426,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/index.html</url>
-          <line>169</line>
+          <line>170</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
