@@ -55,7 +55,7 @@ window.onload = function () {
         var ss = time - hour * 3600 - mm * 60;
         var strHour = hour >= 10 ? '' + hour : '0' + hour;
         var strmm = mm >= 10 ? '' + mm : '0' + mm;
-        var strss = ss >= 10 ? '' + ss : ss < 0 ? '00': '0' + ss;
+        var strss = ss >= 10 ? '' + ss : ss < 1 ? '00': '0' + ss;
         if (hour > 0) {
             return strHour + ':' + strmm + ':' + strss;
         } else {
