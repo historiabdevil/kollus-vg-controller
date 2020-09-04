@@ -97,8 +97,8 @@ window.onload = function () {
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
         }
     }
-    var setVolumeUI =function(value){
-        document.getElementById("volume_progress").style.width = value + '%'
+    var setVolumeUI = function (value) {
+        document.getElementById("volume_inner").style.width = value + '%'
         document.getElementById("volume_position").style.left = value + '%'
     }
     try {
@@ -116,24 +116,21 @@ window.onload = function () {
         bind_evt('mute', function () {
             controller.mute();
         });
-        bind_evt('progress', function (evt){
+        bind_evt('progress', function (evt) {
             var percent = (evt.clientX / wrapper.clientWidth);
             var position = duration * percent;
             controller.play(parseInt(position));
         });
-        bind_evt('volume_outer', function (evt){
+        bind_evt('volume_outer', function (evt) {
             var outer_width = document.getElementById('volume_outer').clientWidth;
             var volume = parseInt((evt.clientX / outer_width) * 100);
             controller.set_volume(volume);
         });
 
 
-
         // bind_evt('value_progress', function(evt){
         //     console.log(evt.clientX);
         // });
-
-
 
 
         controller = new VgControllerClient({
@@ -170,22 +167,16 @@ window.onload = function () {
             document.getElementById("value_progress").style.width = percent + '%'
             document.getElementById("value_position").style.left = percent + '%'
         }).on('done', function () {
-            console.log('done')
-            isPlaying = false
-            controller.set_controls_activity(true);
-            controller.set_controlbar_progress_only(false);
-            overlay.style.display = 'none';
-        }).on('muted', function(isMuted){
+        }).on('muted', function (isMuted) {
             var mute = document.querySelector('#mute > i');
-            if(isMuted){
+            if (isMuted) {
                 mute.classList.remove('fa-volume-mute');
                 mute.classList.add('fa-volume');
-            }
-            else {
+            } else {
                 mute.classList.add('fa-volume-mute');
                 mute.classList.remove('fa-volume');
             }
-        }).on('volumechnage', function(volume){
+        }).on('volumechnage', function (volume) {
             setVolumeUI(volume);
         })
     } catch (e) {
