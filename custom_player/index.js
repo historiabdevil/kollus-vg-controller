@@ -123,7 +123,7 @@ window.onload = function () {
             controller.play(parseInt(position));
             console.log('progerss clicked: ' + position)
         });
-        bind_evt('volume_outer', function (evt) {
+        bind_evt('volume', function (evt) {
             var outer_width = document.getElementById('volume').offsetWidth;
             var volume = parseInt((evt.offsetX / outer_width) * 100);
             console.log('volume clicked: ' + volume)
