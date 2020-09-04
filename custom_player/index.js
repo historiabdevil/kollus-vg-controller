@@ -77,7 +77,8 @@ window.onload = function () {
                 document.querySelector('#play > i').classList.remove('fa-play-circle');
                 document.querySelector('#play > i').classList.add('fa-pause-circle');
             } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
-                hideAllControlbar();                controller.pause();
+                hideAllControlbar();
+                controller.pause();
                 hideControlbar();
                 document.querySelector('#play > i').classList.remove('fa-pause-circle')
                 document.querySelector('#play > i').classList.add('fa-play-circle')
@@ -90,7 +91,7 @@ window.onload = function () {
 
         controller.on('ready', function () {
             console.log('ready');
-            controller.play();
+            hideAllControlbar();
         }).on('loaded', function () {
             console.log('load');
         }).on('disconnected', function () {
