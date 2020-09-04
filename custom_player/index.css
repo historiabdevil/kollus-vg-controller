@@ -84,7 +84,9 @@ button {
     border: none;
     padding: 0;
 }
-
+div {
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
 
 
 #controls {
@@ -95,7 +97,7 @@ button {
     height: 100%;
     display: none;
     z-index: 1;
-    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+
 }
 
 #top{
