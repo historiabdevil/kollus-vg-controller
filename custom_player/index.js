@@ -84,9 +84,6 @@ window.onload = function () {
                 document.querySelector('#play > i').classList.add('fa-play-circle')
             }
         })
-        bind_evt("ext_play", function () {
-            controller.play();
-        });
 
         controller = new VgControllerClient({
             target_window: document.getElementById('player').contentWindow
