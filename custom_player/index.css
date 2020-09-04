@@ -303,7 +303,6 @@ div {
     background: rgba(77,77,77,0.6);
 }
 #setting_menu {
-    display: none;
     position: absolute;
     top: 25%;
     left: 33%;
@@ -312,5 +311,9 @@ div {
     background: white;
     border: 3px #cccccc solid;
     border-radius: 5px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
