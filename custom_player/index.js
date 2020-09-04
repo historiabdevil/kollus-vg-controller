@@ -72,7 +72,6 @@ window.onload = function () {
         bind_evt("play", function () {
             if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
                 hideAllControlbar();
-                controller.play(1);
                 controller.play();
                 hideControlbar();
                 document.querySelector('#play > i').classList.remove('fa-play-circle');
