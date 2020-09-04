@@ -237,9 +237,9 @@ div {
 }
 
 #volume_outer {
-    position: relative;
+    position: absolute;
     float: left;
-    left: 5px;
+    left: 30px;
     top: 12.5px;
     width: 50px;
     height: 5px;

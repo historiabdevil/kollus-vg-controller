@@ -124,8 +124,8 @@ window.onload = function () {
             console.log('progerss clicked: ' + position)
         });
         bind_evt('volume_outer', function (evt) {
-            var outer_width = document.getElementById('volume_outer').clientWidth;
-            var volume = parseInt((evt.clientX / 50) * 100);
+            var outer_width = document.getElementById('volume').offsetWidth;
+            var volume = parseInt((evt.offsetX / outer_width) * 100);
             console.log('volume clicked: ' + volume)
             controller.set_volume(volume);
         });
