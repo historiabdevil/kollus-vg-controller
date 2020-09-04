@@ -8,13 +8,13 @@ window.onload = function () {
     document.body.addEventListener('touchmove', function (e) {
         e.preventDefault()
     }, {passive: false})
-    var touchpannel = document.getElementById('touchpannel');
     var wrapper = document.getElementById('wrapper');
+    var touchpannel = document.getElementById('touchpannel');
+    var controls = document.getElementById('controls');
+    var player = document.getElementById('player');
     var bind_evt = function (id, listener) {
         document.getElementById(id).onclick = listener;
     }
-
-
     var touchManager = new Hammer.Manager(touchpannel);
     var singleTap = new Hammer.Tap({event: 'singletap'});
     var doubleTap = new Hammer.Tap({event: 'doubletap', taps: 2});
@@ -44,19 +44,19 @@ window.onload = function () {
     });
 
     var hideAllControlbar = function () {
-        document.getElementById('controls').style.display = 'none';
-        document.getElementById('touchpannel').style.display = 'none';
-        document.getElementById('player').style.zIndex = 3;
+        controls.style.display = 'none';
+        touchpannel.style.display = 'none';
+        player.style.zIndex = 3;
     }
     var showControlbar = function () {
-        document.getElementById('controls').style.display = 'block';
-        document.getElementById('touchpannel').style.display = 'none';
-        document.getElementById('player').style.zIndex = -1;
+        controls.style.display = 'block';
+        touchpannel.style.display = 'none';
+        player.style.zIndex = -1;
     }
     var hideControlbar = function () {
-        document.getElementById('controls').style.display = 'none';
-        document.getElementById('touchpannel').style.display = 'block';
-        document.getElementById('player').style.zIndex = -1;
+        controlsstyle.display = 'none';
+        touchpannel.style.display = 'block';
+        player.style.zIndex = -1;
     }
     var getTimeString = function (time) {
         var hour = parseInt(time / 3600);
@@ -88,11 +88,11 @@ window.onload = function () {
     }
     var fullscreen = function () {
         if (document.querySelector('#fullscreen > i').classList.contains('fa-expand') > 0) {
-            document.getElementById('wrapper').className = 'fullWrapper';
+            wrapper.className = 'fullWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-expand');
             document.querySelector('#fullscreen > i').classList.add('fa-compress');
         } else if (document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
-            document.getElementById('wrapper').className = 'normalWrapper';
+            wrapper.className = 'normalWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-compress');
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
         }
@@ -111,9 +111,9 @@ window.onload = function () {
         });
 
 
-        bind_evt('value_progress', function(evt){
-            console.log(evt.clientX);
-        });
+        // bind_evt('value_progress', function(evt){
+        //     console.log(evt.clientX);
+        // });
 
 
 
@@ -128,6 +128,7 @@ window.onload = function () {
             controller.set_control_visibility(false);
             controller.set_controlbar_progress_only(false);
             controller.set_controls_activity(false);
+            controller.set_controls_inactive_time(9999999999999999);
         }).on('loaded', function () {
             console.log('load');
         }).on('disconnected', function () {
