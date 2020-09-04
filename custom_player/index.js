@@ -57,7 +57,7 @@ window.onload = function () {
     var getTimeString = function (time) {
         var hour = parseInt(time / 3600);
         var mm = time >= 3600 ? parseInt((time - hour * 3600) / 60) : parseInt(time / 60);
-        var ss = time - hour * 3600 - mm * 60;
+        var ss = praseInt(time - hour * 3600 - mm * 60);
         var strHour = hour >= 10 ? '' + hour : '0' + hour;
         var strmm = mm >= 10 ? '' + mm : '0' + mm;
         var strss = ss >= 10 ? '' + ss : ss < 1 ? '00': '0' + ss;
@@ -83,10 +83,8 @@ window.onload = function () {
         }
     }
     try {
-        showControlbar();
-        // hideAllControlbar();
+        hideAllControlbar();
         bind_evt("play", clickPlayButton)
-
         controller = new VgControllerClient({
             target_window: document.getElementById('player').contentWindow
         });
@@ -94,6 +92,9 @@ window.onload = function () {
         controller.on('ready', function () {
             console.log('ready');
             hideAllControlbar();
+            controller.set_control_visibility(false);
+            controller.set_controlbar_progress_only(false);
+            controller.set_controls_activity(false);
         }).on('loaded', function () {
             console.log('load');
         }).on('disconnected', function () {
