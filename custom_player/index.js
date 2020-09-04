@@ -1,4 +1,4 @@
-document.cookie = 'same-site-cookie=foo; SameSite=Lax';
+document.cookie = 'same-site-cookie=_ga; SameSite=Lax';
 document.cookie = "crossCookie=_ga; SameSite=None; Secure;"
 window.onload = function () {
 
