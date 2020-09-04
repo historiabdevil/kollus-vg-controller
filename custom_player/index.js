@@ -111,29 +111,38 @@ window.onload = function () {
             controller.ff();
         })
 
-        bind_evt("speed", function () {
-            document.getElementById("setting_menu").style.display="block";
+        bind_evt("setting", function () {
+            document.getElementById("setting_menu").style.display = "block";
         })
+        bind_evt("setting_close", function () {
+            document.getElementById("setting_menu").style.display = "none";
+        })
+        document.getElementById('sel_speed').addEventListener('change',
+            function () {
+                controller.set_speed(this.value);
+            });
 
+        document.getElementById('sel_step').addEventListener('change',
+            function () {
+                controller.set_jumpstep(this.value);
+            });
         bind_evt('fullscreen', fullscreen);
         bind_evt('repeat', function () {
             var repeat_data = controller.get_repeat();
-            if(repeat_data.status == 'cancel'){
+            if (repeat_data.status == 'cancel') {
                 var percent = parseInt(controller.get_progress().percent);
                 controller.set_repeat_start()
                 document.getElementById("value_repeat").style.left = percent + '%';
                 document.getElementById("value_repeat").style.width = '2px';
                 document.getElementById('repeatA').style.color = 'red'
-            }
-            else if(repeat_data.status == 'start'){
+            } else if (repeat_data.status == 'start') {
                 var percent = parseInt(controller.get_progress().percent);
                 var start = document.getElementById("value_repeat").style.left.replace('%', '');
-                var width = parseInt(percent -start);
+                var width = parseInt(percent - start);
                 document.getElementById("value_repeat").style.width = width + '%';
                 controller.set_repeat_end()
                 document.getElementById('repeatB').style.color = 'red'
-            }
-            else if(repeat_data.status == 'end'){
+            } else if (repeat_data.status == 'end') {
                 controller.unset_repeat()
                 document.getElementById("value_repeat").style.left = '0%';
                 document.getElementById("value_repeat").style.width = '0px';

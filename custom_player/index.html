@@ -12,13 +12,14 @@
 </head>
 <body>
 <div id="wrapper" class="normalWrapper">
-    <iframe id="player" src="https://v.kr.kollus.com/s?jwt=eyJhbGciOiAiSFMyNTYiLCJ0eXAiOiAiSldUIn0.eyJjdWlkIjogIjM1MzAiLCJleHB0IjogMTg5MzQ1NjAwMCwibWMiOiBbeyJtY2tleSI6ImdnTUZkbTFEIn1dfQ.szmJS5-sUDxWtFyJd4ojtuJJcQZwA5pFQJsUT-nFKD4&custom_key=608b9345c47c330ac31dddf81eb2d934685b7ad69a751ce6de4a2d33c4ff646f">
+    <iframe id="player"
+            src="https://v.kr.kollus.com/s?jwt=eyJhbGciOiAiSFMyNTYiLCJ0eXAiOiAiSldUIn0.eyJjdWlkIjogIjM1MzAiLCJleHB0IjogMTg5MzQ1NjAwMCwibWMiOiBbeyJtY2tleSI6ImdnTUZkbTFEIn1dfQ.szmJS5-sUDxWtFyJd4ojtuJJcQZwA5pFQJsUT-nFKD4&custom_key=608b9345c47c330ac31dddf81eb2d934685b7ad69a751ce6de4a2d33c4ff646f">
     </iframe>
     <div id="controls">
         <div id="center">
-                <button id="rw"><i class="fas fa-backward"></i></button>
-                <button id="play"><i class="far fa-play-circle"></i></button>
-                <button id="ff"><i class="fas fa-forward"></i></button>
+            <button id="rw"><i class="fas fa-backward"></i></button>
+            <button id="play"><i class="far fa-play-circle"></i></button>
+            <button id="ff"><i class="fas fa-forward"></i></button>
         </div>
         <div id="top">
 
@@ -42,7 +43,7 @@
                         <span id="repeatA">A</span>
                         <span id="repeatB">- B</span>
                     </button>
-                    <button id="speed">배속</button>
+
                 </div>
                 <div id="button_right">
                     <button id="mute"><i class="fas fa-volume-mute"></i></button>
@@ -50,7 +51,8 @@
                         <div id="volume_inner"></div>
                         <div id="volume_position"></div>
                     </div>
-<!--                    <button id="pip">PIP</button>-->
+                    <!--                    <button id="pip">PIP</button>-->
+                    <button id="setting"><i class="fas fa-sliders-h"></i></button>
                     <button id="fullscreen"><i class="fas fa-expand"></i></button>
                 </div>
             </div>
@@ -60,13 +62,20 @@
     <div id="setting_menu">
         <div id="setting_inner">
             <div>
-                <label>배속 설정</label>
-                <select>
-                    <option>0.5</option>
-                    <option>1.0</option>
-                    <option>1.5</option>
-                    <option>2.0</option>
+                <button id="setting_close"><i class="fas fa-times-circle"></i></button>
+            </div>
+            <div id="div_speed">
+                <label for="sel_speed">배속 설정</label>
+                <select id="sel_speed">
+                    <option value="0.5">0.5</option>
+                    <option value="1.0">1.0</option>
+                    <option value="1.5">1.5</option>
+                    <option value="2.0">2.0</option>
                 </select>
+            </div>
+            <div id="div_step">
+                <label for="sel_step">건너뛰기 설정</label>
+                <input type="number" id="sel_step" value="5.0" min="0.0"/>
             </div>
         </div>
     </div>

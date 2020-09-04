@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="1a3204681f" level="application" />
+    <orderEntry type="library" name="hammer" level="application" />
+    <orderEntry type="library" name="vg-controller-client.latest" level="application" />
   </component>
 </module>
