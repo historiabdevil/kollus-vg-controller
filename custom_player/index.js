@@ -112,6 +112,7 @@ window.onload = function () {
         })
         bind_evt('fullscreen', fullscreen);
         bind_evt('repeat', function () {
+            console.log(controller.get_repeat())
         });
         bind_evt('mute', function () {
             controller.mute();
@@ -179,7 +180,7 @@ window.onload = function () {
                 mute.classList.add('fa-volume-mute');
                 mute.classList.remove('fa-volume');
             }
-        }).on('volumechnage', function (volume) {
+        }).on('volumechange', function (volume) {
             setVolumeUI(volume);
         })
     } catch (e) {
