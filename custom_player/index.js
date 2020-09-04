@@ -106,8 +106,39 @@ window.onload = function () {
             controller.ff();
         })
         bind_evt('fullscreen', fullscreen);
-        bind_evt('repeat',function (){
+        bind_evt('repeat', function () {
         });
+
+
+        dragElement(document.getElementById("value_position"));
+
+        function dragElement(elmnt) {
+            var startX = 0, endX = 0;
+            elmnt.onmousedown = dragMouseDown;
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                startX = e.clientX;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+                console.log(startX)
+            }
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                endX = pos3 - e.clientX;
+                // set the element's new position:
+                console.log(endX)
+            }
+
+            function closeDragElement() {
+                // stop moving when mouse button is released:
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
 
 
         controller = new VgControllerClient({
@@ -144,7 +175,7 @@ window.onload = function () {
         controller.on('progress', function (percent, position, duration) {
 
             document.getElementById('duration').innerText = getTimeString(duration);
-            document.getElementById('current_time').innerText = getTimeString(percent);
+            document.getElementById('current_time').innerText = getTimeString(position);
             document.getElementById("value_progress").style.width = percent + '%'
             document.getElementById("value_position").style.left = percent + '%'
         });
