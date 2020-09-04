@@ -118,13 +118,14 @@ window.onload = function () {
         });
         bind_evt('progress', function (evt) {
             var percent = (evt.clientX / wrapper.clientWidth);
+            var duration = controller.get_progress().duration;
             var position = duration * percent;
             controller.play(parseInt(position));
-            console.log('progerss clicked: ' + percent)
+            console.log('progerss clicked: ' + position)
         });
         bind_evt('volume_outer', function (evt) {
             var outer_width = document.getElementById('volume_outer').clientWidth;
-            var volume = parseInt((evt.clientX / outer_width) * 100);
+            var volume = parseInt((evt.clientX / 50) * 100);
             console.log('volume clicked: ' + volume)
             controller.set_volume(volume);
         });
