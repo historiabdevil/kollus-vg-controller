@@ -26,7 +26,7 @@ window.onload = function () {
     singleTap.requireFailure([tripleTap, doubleTap]);
 
     touchManager.on('singletap', function (ev) {
-        ev.stopPropagation();
+
         console.log('SingleTap')
         showControlbar();
         setTimeout(function () {
@@ -34,7 +34,7 @@ window.onload = function () {
         }, showTimeControlbar * 1000);
     });
     touchManager.on('doubletap', function (ev) {
-        ev.stopPropagation();
+
         console.log('DoubleTap : ' + JSON.stringify(ev.center))
         if (touchpannel.clientWidth / 2 < ev.center.x) {
             controller.ff();
