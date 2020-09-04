@@ -42,14 +42,17 @@ window.onload = function () {
     var hideAllControlbar = function () {
         document.getElementById('controls').style.display = 'none';
         document.getElementById('touchpannel').style.display = 'none';
+        document.getElementById('player').style.zIndex = 3;
     }
     var showControlbar = function () {
         document.getElementById('controls').style.display = 'block';
         document.getElementById('touchpannel').style.display = 'none';
+        document.getElementById('player').style.zIndex = -1;
     }
     var hideControlbar = function () {
         document.getElementById('controls').style.display = 'none';
         document.getElementById('touchpannel').style.display = 'block';
+        document.getElementById('player').style.zIndex = -1;
     }
     var getTimeString = function (time) {
         var hour = parseInt(time / 3600);
