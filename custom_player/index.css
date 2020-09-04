@@ -158,6 +158,14 @@ div {
     width: 30%;
 }
 
+#value_repeat {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    background-color: violet;
+    width: 0%;
+}
+
 #value_position {
     position: absolute;
     top: -2.5px;

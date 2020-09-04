@@ -112,7 +112,25 @@ window.onload = function () {
         })
         bind_evt('fullscreen', fullscreen);
         bind_evt('repeat', function () {
-            console.log(controller.get_repeat())
+            var repeat_data = controller.get_repeat();
+            if(repeat_data.status == 'cancel'){
+                var percent = parseInt(controller.get_progress().percent);
+                controller.set_repeat_start()
+                document.getElementById("value_repeat").style.left = percent + '%';
+                document.getElementById("value_repeat").style.width = '2px';
+            }
+            else if(repeat_data.status == 'start'){
+                var percent = parseInt(controller.get_progress().percent);
+                var start = document.getElementById("value_repeat").style.left.replace('%', '');
+                var width = parseInt(percent -start);
+                document.getElementById("value_repeat").style.width = width + '%';
+                controller.set_repeat_end()
+            }
+            else if(repeat_data.status == 'end'){
+                controller.unset_repeat()
+                document.getElementById("value_repeat").style.left = '0%';
+                document.getElementById("value_repeat").style.width = '0px';
+            }
         });
         bind_evt('mute', function () {
             controller.mute();
