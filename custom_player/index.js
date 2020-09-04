@@ -110,6 +110,11 @@ window.onload = function () {
         bind_evt("ff", function () {
             controller.ff();
         })
+
+        bind_evt("speed", function () {
+            document.getElementById("setting_menu").style.display="block";
+        })
+
         bind_evt('fullscreen', fullscreen);
         bind_evt('repeat', function () {
             var repeat_data = controller.get_repeat();
@@ -118,6 +123,7 @@ window.onload = function () {
                 controller.set_repeat_start()
                 document.getElementById("value_repeat").style.left = percent + '%';
                 document.getElementById("value_repeat").style.width = '2px';
+                document.getElementById('repeatA').style.color = 'red'
             }
             else if(repeat_data.status == 'start'){
                 var percent = parseInt(controller.get_progress().percent);
@@ -125,11 +131,14 @@ window.onload = function () {
                 var width = parseInt(percent -start);
                 document.getElementById("value_repeat").style.width = width + '%';
                 controller.set_repeat_end()
+                document.getElementById('repeatB').style.color = 'red'
             }
             else if(repeat_data.status == 'end'){
                 controller.unset_repeat()
                 document.getElementById("value_repeat").style.left = '0%';
                 document.getElementById("value_repeat").style.width = '0px';
+                document.getElementById('repeatA').style.color = 'white'
+                document.getElementById('repeatB').style.color = 'white'
             }
         });
         bind_evt('mute', function () {
@@ -193,10 +202,10 @@ window.onload = function () {
             var mute = document.querySelector('#mute > i');
             if (isMuted) {
                 mute.classList.remove('fa-volume-mute');
-                mute.classList.add('fa-volume');
+                mute.classList.add('fa-volume-up');
             } else {
                 mute.classList.add('fa-volume-mute');
-                mute.classList.remove('fa-volume');
+                mute.classList.remove('fa-volume-up');
             }
         }).on('volumechange', function (volume) {
             setVolumeUI(volume);

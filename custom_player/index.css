@@ -300,5 +300,17 @@ div {
     width: 100%;
     height: 100%;
     z-index: 3;
+    background: rgba(77,77,77,0.6);
+}
+#setting_menu {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 33%;
+    width: 30%;
+    height: 50%;
+    background: white;
+    border: 3px #cccccc solid;
+    border-radius: 5px 5px;
 }
 
