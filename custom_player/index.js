@@ -28,6 +28,9 @@ window.onload = function () {
     touchManager.on('singletap', function (ev) {
         console.log('SingleTap')
         showControlbar();
+        setTimeout(function () {
+            hideControlbar();
+        }, showTimeControlbar * 1000);
     });
     touchManager.on('doubletap', function (ev) {
         console.log('DoubleTap : ' + JSON.stringify(ev.center))
@@ -57,17 +60,17 @@ window.onload = function () {
     var getTimeString = function (time) {
         var hour = parseInt(time / 3600);
         var mm = time >= 3600 ? parseInt((time - hour * 3600) / 60) : parseInt(time / 60);
-        var ss = praseInt(time - hour * 3600 - mm * 60);
+        var ss = parseInt(time - hour * 3600 - mm * 60);
         var strHour = hour >= 10 ? '' + hour : '0' + hour;
         var strmm = mm >= 10 ? '' + mm : '0' + mm;
-        var strss = ss >= 10 ? '' + ss : ss < 1 ? '00': '0' + ss;
+        var strss = ss >= 10 ? '' + ss : ss < 1 ? '00' : '0' + ss;
         if (hour > 0) {
             return strHour + ':' + strmm + ':' + strss;
         } else {
             return strmm + ':' + strss;
         }
     }
-    var clickPlayButton= function(){
+    var clickPlayButton = function () {
         if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
             hideAllControlbar();
             controller.play();
@@ -82,9 +85,29 @@ window.onload = function () {
             document.querySelector('#play > i').classList.add('fa-play-circle')
         }
     }
+    var fullscreen = function () {
+        if (document.querySelector('#fullscreen > i').classList.contains('fa-expand') > 0) {
+            document.getElementById('wrapper').className = 'fullWrapper';
+            document.querySelector('#fullscreen > i').classList.remove('fa-expand');
+            document.querySelector('#fullscreen > i').classList.add('fa-compress');
+        } else if (document.querySelector('#play > i').classList.contains('fa-compress') > 0) {
+            document.getElementById('wrapper').className = 'normalWrapper';
+            document.querySelector('#fullscreen > i').classList.remove('fa-compress');
+            document.querySelector('#fullscreen > i').classList.add('fa-expand');
+        }
+    }
     try {
         hideAllControlbar();
         bind_evt("play", clickPlayButton)
+        bind_evt("rw", function () {
+            controller.rw();
+        })
+        bind_evt("ff", function () {
+            controller.ff();
+        })
+        bind_evt('fullscreen', fullscreen);
+
+
         controller = new VgControllerClient({
             target_window: document.getElementById('player').contentWindow
         });
