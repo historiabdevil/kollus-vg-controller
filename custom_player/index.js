@@ -120,10 +120,12 @@ window.onload = function () {
             var percent = (evt.clientX / wrapper.clientWidth);
             var position = duration * percent;
             controller.play(parseInt(position));
+            console.log('progerss clicked: ' + percent)
         });
         bind_evt('volume_outer', function (evt) {
             var outer_width = document.getElementById('volume_outer').clientWidth;
             var volume = parseInt((evt.clientX / outer_width) * 100);
+            console.log('volume clicked: ' + volume)
             controller.set_volume(volume);
         });
 
