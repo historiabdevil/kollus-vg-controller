@@ -54,7 +54,7 @@ window.onload = function () {
         player.style.zIndex = -1;
     }
     var hideControlbar = function () {
-        controlsstyle.display = 'none';
+        controls.style.display = 'none';
         touchpannel.style.display = 'block';
         player.style.zIndex = -1;
     }
