@@ -97,6 +97,10 @@ window.onload = function () {
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
         }
     }
+    var setVolumeUI =function(value){
+        document.getElementById("volume_progress").style.width = value + '%'
+        document.getElementById("volume_position").style.left = value + '%'
+    }
     try {
         hideAllControlbar();
         bind_evt("play", clickPlayButton)
@@ -109,6 +113,13 @@ window.onload = function () {
         bind_evt('fullscreen', fullscreen);
         bind_evt('repeat', function () {
         });
+        bind_evt('mute', function () {
+            controller.mute();
+        });
+        bind_evt('progress', function (evt){
+            console.log(evt);
+        });
+
 
 
         // bind_evt('value_progress', function(evt){
@@ -129,40 +140,46 @@ window.onload = function () {
             controller.set_controlbar_progress_only(false);
             controller.set_controls_activity(false);
             controller.set_controls_inactive_time(9999999999999999);
+            setVolumeUI(controller.get_volume());
         }).on('loaded', function () {
             console.log('load');
         }).on('disconnected', function () {
             console.log('disconnect');
-        });
-
-        controller.on('error', function (error_code) {
+        }).on('error', function (error_code) {
             console.log(error_code);
-        });
-        controller.on('play', function () {
+        }).on('play', function () {
             console.log('play')
             hideControlbar()
             document.querySelector('#play > i').classList.remove('fa-play-circle');
             document.querySelector('#play > i').classList.add('fa-pause-circle');
-        });
-        controller.on('pause', function () {
+        }).on('pause', function () {
             console.log('pause')
             showControlbar()
             document.querySelector('#play > i').classList.remove('fa-pause-circle')
             document.querySelector('#play > i').classList.add('fa-play-circle')
-        });
-        controller.on('progress', function (percent, position, duration) {
-
+        }).on('progress', function (percent, position, duration) {
             document.getElementById('duration').innerText = getTimeString(duration);
             document.getElementById('current_time').innerText = getTimeString(position);
             document.getElementById("value_progress").style.width = percent + '%'
             document.getElementById("value_position").style.left = percent + '%'
-        });
-        controller.on('done', function () {
+        }).on('done', function () {
             console.log('done')
             isPlaying = false
             controller.set_controls_activity(true);
             controller.set_controlbar_progress_only(false);
             overlay.style.display = 'none';
+        }).on('muted', function(isMuted){
+            var mute = document.querySelector('#mute > i');
+            if(isMuted){
+                mute.classList.remove('fa-volume-mute');
+                mute.classList.add('fa-volume');
+            }
+            else {
+                mute.classList.add('fa-volume-mute');
+                mute.classList.remove('fa-volume');
+            }
+        }).on('volumechnage', function(volume){
+            setVolumeUI(volume);
         })
     } catch (e) {
         console.log(e);
