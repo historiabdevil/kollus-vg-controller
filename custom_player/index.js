@@ -94,12 +94,9 @@ window.onload = function () {
 
         controller.on('ready', function () {
             console.log('ready');
-
-            // showControlbar()
+            controller.play();
         }).on('loaded', function () {
             console.log('load');
-            controller.set_controls_activity(false);
-            controller.set_controlbar_hide_playing(true);
         }).on('disconnected', function () {
             console.log('disconnect');
         });
