@@ -66,27 +66,26 @@ window.onload = function () {
         } else {
             return strmm + ':' + strss;
         }
-
-
+    }
+    var clickPlayButton= function(){
+        if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
+            hideAllControlbar();
+            controller.play();
+            hideControlbar();
+            document.querySelector('#play > i').classList.remove('fa-play-circle');
+            document.querySelector('#play > i').classList.add('fa-pause-circle');
+        } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
+            hideAllControlbar();
+            controller.pause();
+            hideControlbar();
+            document.querySelector('#play > i').classList.remove('fa-pause-circle')
+            document.querySelector('#play > i').classList.add('fa-play-circle')
+        }
     }
     try {
         showControlbar();
         // hideAllControlbar();
-        bind_evt("play", function () {
-            if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
-                hideAllControlbar();
-                controller.play();
-                hideControlbar();
-                document.querySelector('#play > i').classList.remove('fa-play-circle');
-                document.querySelector('#play > i').classList.add('fa-pause-circle');
-            } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
-                hideAllControlbar();
-                controller.pause();
-                hideControlbar();
-                document.querySelector('#play > i').classList.remove('fa-pause-circle')
-                document.querySelector('#play > i').classList.add('fa-play-circle')
-            }
-        })
+        bind_evt("play", clickPlayButton)
 
         controller = new VgControllerClient({
             target_window: document.getElementById('player').contentWindow
@@ -107,11 +106,14 @@ window.onload = function () {
         controller.on('play', function () {
             console.log('play')
             hideControlbar()
+            document.querySelector('#play > i').classList.remove('fa-play-circle');
+            document.querySelector('#play > i').classList.add('fa-pause-circle');
         });
         controller.on('pause', function () {
             console.log('pause')
-            isPlaying = false
-            controller.set_controlbar_progress_only(false);
+            showControlbar()
+            document.querySelector('#play > i').classList.remove('fa-pause-circle')
+            document.querySelector('#play > i').classList.add('fa-play-circle')
         });
         controller.on('progress', function (percent, position, duration) {
 
