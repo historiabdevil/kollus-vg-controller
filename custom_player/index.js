@@ -34,7 +34,7 @@ window.onload = function () {
     });
     touchManager.on('doubletap', function (ev) {
         console.log('DoubleTap : ' + JSON.stringify(ev.center))
-        if (overlay.clientWidth / 2 < ev.center.x) {
+        if (touchpannel.clientWidth / 2 < ev.center.x) {
             controller.ff();
         } else {
 
@@ -90,7 +90,7 @@ window.onload = function () {
             document.getElementById('wrapper').className = 'fullWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-expand');
             document.querySelector('#fullscreen > i').classList.add('fa-compress');
-        } else if (document.querySelector('#play > i').classList.contains('fa-compress') > 0) {
+        } else if (document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
             document.getElementById('wrapper').className = 'normalWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-compress');
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
@@ -106,6 +106,8 @@ window.onload = function () {
             controller.ff();
         })
         bind_evt('fullscreen', fullscreen);
+        bind_evt('repeat',function (){
+        });
 
 
         controller = new VgControllerClient({
