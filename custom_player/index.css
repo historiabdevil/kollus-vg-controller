@@ -49,6 +49,17 @@ table {
 }
 
 
+@media screen and (orientation: portrait) {
+
+}
+
+@media screen and (orientation: landscape) {
+
+}
+
+
+
+
 .normalWrapper {
     position: relative;
     width: 100%;
@@ -297,7 +308,7 @@ div {
     z-index: 2;
     background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
 }
-#setting_menu {
+#setting_menu, #nscreen_popup {
     display: none;
     position: absolute;
     top: 0;
@@ -307,7 +318,10 @@ div {
     z-index: 3;
     background: rgba(77,77,77,0.6);
 }
-#setting_inner {
+#nscreen_popup {
+    z-index: 5;
+}
+#setting_inner, #nscreen_popup_inner {
     position: absolute;
     top: 25%;
     left: 33%;

@@ -19,8 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="add custom_player">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_player/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_player/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_player/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -48,6 +53,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,6 +66,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" nameIsGenerated="true" port="9229" isV8Legacy="true">
+      <option name="v8Legacy" value="true" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,265 +86,11 @@
       <workItem from="1597705816256" duration="14582000" />
       <workItem from="1597887165300" duration="7553000" />
       <workItem from="1599113176574" duration="314000" />
-    </task>
-    <task id="LOCAL-00001" summary="add .gitignore&#10;add getMotionPermission()">
-      <created>1597653545313</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1597653545313</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add iframe and css style">
-      <created>1597654361228</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1597654361228</updated>
-    </task>
-    <task id="LOCAL-00003" summary="change iframe src http to https">
-      <created>1597654477401</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1597654477401</updated>
-    </task>
-    <task id="LOCAL-00004" summary="initial css html, body">
-      <created>1597654904256</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1597654904256</updated>
-    </task>
-    <task id="LOCAL-00005" summary="show controlbar when play done">
-      <created>1597705977966</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1597705977966</updated>
-    </task>
-    <task id="LOCAL-00006" summary="test for fullscreen mode">
-      <created>1597708215073</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1597708215073</updated>
-    </task>
-    <task id="LOCAL-00007" summary="insert fake image for overlay div">
-      <created>1597708991597</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1597708991597</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add css for overlay div when fullscreen">
-      <created>1597709931366</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1597709931366</updated>
-    </task>
-    <task id="LOCAL-00009" summary="change css for overlay div when fullscreen">
-      <created>1597711522618</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1597711522618</updated>
-    </task>
-    <task id="LOCAL-00010" summary="change css for overlay div when fullscreen">
-      <created>1597711787703</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1597711787703</updated>
-    </task>
-    <task id="LOCAL-00011" summary="change css for overlay div when fullscreen">
-      <created>1597712236718</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1597712236718</updated>
-    </task>
-    <task id="LOCAL-00012" summary="change css for overlay div when fullscreen">
-      <created>1597712380896</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1597712380896</updated>
-    </task>
-    <task id="LOCAL-00013" summary="change css for overlay div when fullscreen">
-      <created>1597713538752</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1597713538752</updated>
-    </task>
-    <task id="LOCAL-00014" summary="remove user-scalable">
-      <created>1597714439656</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1597714439656</updated>
-    </task>
-    <task id="LOCAL-00015" summary="add user-scalable&#10;set hide controlbar 3s&#10;hide overlay when play done">
-      <created>1597714720848</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1597714720848</updated>
-    </task>
-    <task id="LOCAL-00016" summary="add iframe playsinline">
-      <created>1597715088804</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1597715088804</updated>
-    </task>
-    <task id="LOCAL-00017" summary="change fullscreen logic">
-      <created>1597719644855</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1597719644855</updated>
-    </task>
-    <task id="LOCAL-00018" summary="change fullscreen logic">
-      <created>1597721306699</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1597721306699</updated>
-    </task>
-    <task id="LOCAL-00019" summary="change fullscreen logic">
-      <created>1597722516832</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1597722516832</updated>
-    </task>
-    <task id="LOCAL-00020" summary="change fullscreen logic">
-      <created>1597723110967</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1597723110967</updated>
-    </task>
-    <task id="LOCAL-00021" summary="change fullscreen logic">
-      <created>1597723357211</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1597723357211</updated>
-    </task>
-    <task id="LOCAL-00022" summary="change fullscreen logic">
-      <created>1597723526805</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1597723526805</updated>
-    </task>
-    <task id="LOCAL-00023" summary="add liveiframetest.html">
-      <created>1597887261464</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1597887261464</updated>
-    </task>
-    <task id="LOCAL-00024" summary="change iframe size">
-      <created>1597888018866</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1597888018866</updated>
-    </task>
-    <task id="LOCAL-00025" summary="change iframe size">
-      <created>1597888264453</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1597888264453</updated>
-    </task>
-    <task id="LOCAL-00026" summary="change iframe size">
-      <created>1597896147348</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896147348</updated>
-    </task>
-    <task id="LOCAL-00027" summary="change iframe size">
-      <created>1597896308652</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896308652</updated>
-    </task>
-    <task id="LOCAL-00028" summary="change iframe size">
-      <created>1597896426333</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896426333</updated>
-    </task>
-    <task id="LOCAL-00029" summary="change iframe size">
-      <created>1597896503655</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896503655</updated>
-    </task>
-    <task id="LOCAL-00030" summary="change iframe size">
-      <created>1597896566254</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896566254</updated>
-    </task>
-    <task id="LOCAL-00031" summary="change iframe size">
-      <created>1597896728010</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1597896728010</updated>
-    </task>
-    <task id="LOCAL-00032" summary="change iframe size">
-      <created>1597897053765</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1597897053765</updated>
-    </task>
-    <task id="LOCAL-00033" summary="change iframe size">
-      <created>1597901570631</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1597901570631</updated>
-    </task>
-    <task id="LOCAL-00034" summary="change iframe size">
-      <created>1597901853696</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1597901853696</updated>
-    </task>
-    <task id="LOCAL-00035" summary="change iframe size">
-      <created>1597902280145</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1597902280145</updated>
-    </task>
-    <task id="LOCAL-00036" summary="change iframe size">
-      <created>1597902478694</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1597902478694</updated>
-    </task>
-    <task id="LOCAL-00037" summary="change iframe size">
-      <created>1597902762269</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1597902762269</updated>
+      <workItem from="1599180805747" duration="16626000" />
+      <workItem from="1599524770661" duration="645000" />
+      <workItem from="1599625805186" duration="53000" />
+      <workItem from="1599812639487" duration="1147000" />
+      <workItem from="1599984899083" duration="25620000" />
     </task>
     <task id="LOCAL-00038" summary="change iframe size">
       <created>1597903054497</created>
@@ -361,7 +120,322 @@
       <option name="project" value="LOCAL" />
       <updated>1599113254127</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add custom_player">
+      <created>1599165612531</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1599165612532</updated>
+    </task>
+    <task id="LOCAL-00043" summary="add custom_player">
+      <created>1599165759168</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1599165759168</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add custom_player">
+      <created>1599166070929</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1599166070929</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add custom_player">
+      <created>1599166136218</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1599166136219</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add custom_player">
+      <created>1599166416874</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1599166416874</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add custom_player">
+      <created>1599177830285</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1599177830285</updated>
+    </task>
+    <task id="LOCAL-00048" summary="add custom_player">
+      <created>1599180975775</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1599180975775</updated>
+    </task>
+    <task id="LOCAL-00049" summary="add custom_player">
+      <created>1599181131267</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1599181131267</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add custom_player">
+      <created>1599181518456</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1599181518457</updated>
+    </task>
+    <task id="LOCAL-00051" summary="add custom_player">
+      <created>1599181865601</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1599181865601</updated>
+    </task>
+    <task id="LOCAL-00052" summary="add custom_player">
+      <created>1599181947948</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1599181947948</updated>
+    </task>
+    <task id="LOCAL-00053" summary="add custom_player">
+      <created>1599182124388</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1599182124388</updated>
+    </task>
+    <task id="LOCAL-00054" summary="add custom_player">
+      <created>1599182337709</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1599182337709</updated>
+    </task>
+    <task id="LOCAL-00055" summary="add custom_player">
+      <created>1599182537007</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1599182537007</updated>
+    </task>
+    <task id="LOCAL-00056" summary="add custom_player">
+      <created>1599182764732</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1599182764732</updated>
+    </task>
+    <task id="LOCAL-00057" summary="add custom_player">
+      <created>1599183151322</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1599183151322</updated>
+    </task>
+    <task id="LOCAL-00058" summary="add custom_player">
+      <created>1599183927237</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1599183927237</updated>
+    </task>
+    <task id="LOCAL-00059" summary="add custom_player">
+      <created>1599184260912</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1599184260912</updated>
+    </task>
+    <task id="LOCAL-00060" summary="add custom_player">
+      <created>1599185045310</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1599185045310</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add custom_player">
+      <created>1599185775543</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1599185775543</updated>
+    </task>
+    <task id="LOCAL-00062" summary="add custom_player">
+      <created>1599186091821</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1599186091821</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add custom_player">
+      <created>1599186360466</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1599186360466</updated>
+    </task>
+    <task id="LOCAL-00064" summary="add custom_player">
+      <created>1599186626321</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1599186626321</updated>
+    </task>
+    <task id="LOCAL-00065" summary="add custom_player">
+      <created>1599186987803</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1599186987803</updated>
+    </task>
+    <task id="LOCAL-00066" summary="add custom_player">
+      <created>1599187204167</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1599187204167</updated>
+    </task>
+    <task id="LOCAL-00067" summary="add custom_player">
+      <created>1599187302025</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1599187302025</updated>
+    </task>
+    <task id="LOCAL-00068" summary="add custom_player">
+      <created>1599187801154</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1599187801154</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add custom_player">
+      <created>1599187939672</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1599187939672</updated>
+    </task>
+    <task id="LOCAL-00070" summary="add custom_player">
+      <created>1599188907826</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1599188907826</updated>
+    </task>
+    <task id="LOCAL-00071" summary="add custom_player">
+      <created>1599190636447</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1599190636447</updated>
+    </task>
+    <task id="LOCAL-00072" summary="add custom_player">
+      <created>1599190802746</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1599190802746</updated>
+    </task>
+    <task id="LOCAL-00073" summary="add custom_player">
+      <created>1599191049396</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1599191049397</updated>
+    </task>
+    <task id="LOCAL-00074" summary="add custom_player">
+      <created>1599191508340</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1599191508341</updated>
+    </task>
+    <task id="LOCAL-00075" summary="add custom_player">
+      <created>1599191995435</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1599191995435</updated>
+    </task>
+    <task id="LOCAL-00076" summary="add custom_player">
+      <created>1599192104458</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1599192104458</updated>
+    </task>
+    <task id="LOCAL-00077" summary="add custom_player">
+      <created>1599192303502</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1599192303502</updated>
+    </task>
+    <task id="LOCAL-00078" summary="add custom_player">
+      <created>1599192604852</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1599192604852</updated>
+    </task>
+    <task id="LOCAL-00079" summary="add custom_player">
+      <created>1599193557533</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1599193557533</updated>
+    </task>
+    <task id="LOCAL-00080" summary="add custom_player">
+      <created>1599195038073</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1599195038073</updated>
+    </task>
+    <task id="LOCAL-00081" summary="add custom_player">
+      <created>1599195146908</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1599195146908</updated>
+    </task>
+    <task id="LOCAL-00082" summary="add custom_player">
+      <created>1599196131802</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1599196131802</updated>
+    </task>
+    <task id="LOCAL-00083" summary="add custom_player">
+      <created>1599196218682</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1599196218682</updated>
+    </task>
+    <task id="LOCAL-00084" summary="add custom_player">
+      <created>1599196855818</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1599196855818</updated>
+    </task>
+    <task id="LOCAL-00085" summary="add custom_player">
+      <created>1599197928632</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1599197928632</updated>
+    </task>
+    <task id="LOCAL-00086" summary="add custom_player">
+      <created>1599813051472</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1599813051473</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,30 +469,98 @@
     <MESSAGE value="change fullscreen logic" />
     <MESSAGE value="add liveiframetest.html" />
     <MESSAGE value="change iframe size" />
-    <option name="LAST_COMMIT_MESSAGE" value="change iframe size" />
+    <MESSAGE value="add custom_player" />
+    <option name="LAST_COMMIT_MESSAGE" value="add custom_player" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599994389177">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994389177" />
     <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1599113253438">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
     <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113253438" />
+    <state width="1899" height="376" key="GridCell.Tab.0.bottom" timestamp="1600031184533">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.0.bottom/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311602" />
+    <state width="1899" height="376" key="GridCell.Tab.0.bottom/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184533" />
+    <state width="1899" height="376" key="GridCell.Tab.0.center" timestamp="1600031184532">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.0.center/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311600" />
+    <state width="1899" height="376" key="GridCell.Tab.0.center/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184532" />
+    <state width="1899" height="376" key="GridCell.Tab.0.left" timestamp="1600031184531">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.0.left/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311599" />
+    <state width="1899" height="376" key="GridCell.Tab.0.left/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184531" />
+    <state width="1899" height="376" key="GridCell.Tab.0.right" timestamp="1600031184532">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.0.right/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311601" />
+    <state width="1899" height="376" key="GridCell.Tab.0.right/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184532" />
+    <state width="1899" height="376" key="GridCell.Tab.1.bottom" timestamp="1600031184536">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.1.bottom/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311609" />
+    <state width="1899" height="376" key="GridCell.Tab.1.bottom/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184536" />
+    <state width="1899" height="376" key="GridCell.Tab.1.center" timestamp="1600031184535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.1.center/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311606" />
+    <state width="1899" height="376" key="GridCell.Tab.1.center/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184535" />
+    <state width="1899" height="376" key="GridCell.Tab.1.left" timestamp="1600031184534">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.1.left/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311604" />
+    <state width="1899" height="376" key="GridCell.Tab.1.left/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184534" />
+    <state width="1899" height="376" key="GridCell.Tab.1.right" timestamp="1600031184535">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.1.right/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994311608" />
+    <state width="1899" height="376" key="GridCell.Tab.1.right/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184535" />
+    <state width="1899" height="376" key="GridCell.Tab.2.bottom" timestamp="1600031184539">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.2.bottom/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994312269" />
+    <state width="1899" height="376" key="GridCell.Tab.2.bottom/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184539" />
+    <state width="1899" height="376" key="GridCell.Tab.2.center" timestamp="1600031184538">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.2.center/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994312267" />
+    <state width="1899" height="376" key="GridCell.Tab.2.center/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184538" />
+    <state width="1899" height="376" key="GridCell.Tab.2.left" timestamp="1600031184537">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.2.left/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994312266" />
+    <state width="1899" height="376" key="GridCell.Tab.2.left/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184537" />
+    <state width="1899" height="376" key="GridCell.Tab.2.right" timestamp="1600031184538">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1899" height="376" key="GridCell.Tab.2.right/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994312267" />
+    <state width="1899" height="376" key="GridCell.Tab.2.right/84.1103.1680.1027/0.0.1920.1080/-1920.23.1920.1057@0.0.1920.1080" timestamp="1600031184538" />
     <state x="469" y="179" key="SettingsEditor" timestamp="1597653241028">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1599113264005">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1599813055080">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
+    <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599813055080" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
+    <state x="2480" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599197930294" />
     <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113264005" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="625" y="255" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597652357655" />
-    <state x="189" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1597903371758">
-      <screen x="62" y="0" width="1858" height="1080" />
+    <state x="2051" y="235" width="695" height="678" key="search.everywhere.popup" timestamp="1599183691131">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2051" y="235" width="695" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599183691131" />
     <state x="189" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1597903371758" />
   </component>
   <component name="XDebuggerManager">
