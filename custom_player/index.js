@@ -1,10 +1,10 @@
-var controller;
+
 !(function ($, window) {
     // variable initialize
-
+    var controller;
     var showTimeControlbar = 5; //seconds
 
-
+    var isFullscreen = false;
     var wrapper = document.getElementById('wrapper');
     var touchpannel = document.getElementById('touchpannel');
     var controls = document.getElementById('controls');
@@ -55,10 +55,10 @@ var controller;
         });
     }
     $(window).on('evtOri', function (event, orientaion) {
-        if (orientaion == 'landscape') {
-
-        } else if (orientaion == 'portrait') {
-
+        alert(orientaion + ' ' + document.documentElement.clientHeight );
+        if(isFullscreen || orientaion == 'landscape'){
+            wrapper.style.height = document.documentElement.clientHeight + 'px';
+            wrapper.style.paddingBottom = '0';
         }
     });
 
@@ -69,30 +69,6 @@ var controller;
     //     e.preventDefault()
     // }, {passive: false})
 
-
-    var fade = function (element, startcolor, endcolor, time_elapsed) {
-        var currentcolor = startcolor;
-        var stepcount = 0;
-        var steps = 10;
-        var red_change = (startcolor[0] - endcolor[0]) / steps;
-        var green_change = (startcolor[1] - endcolor[1]) / steps;
-        var blue_change = (startcolor[2] - endcolor[2]) / steps;
-        var alpha_change = 0.1
-        var timer = setInterval(function () {
-
-            currentcolor[0] = parseInt(currentcolor[0] - red_change);
-            currentcolor[1] = parseInt(currentcolor[1] - green_change);
-            currentcolor[2] = parseInt(currentcolor[2] - blue_change);
-            currentcolor[3] = parseFloat(currentcolor[3] - alpha_change)
-            stepcount += 1;
-            // element.style.backgroundColor = 'rgba(' + currentcolor.toString() + ')';
-
-            if (stepcount >= steps) {
-                element.style.backgroundColor = 'rgba(' + endcolor.toString() + ')';
-                clearInterval(timer);
-            }
-        }, time_elapsed);
-    }
 
     var touchManager = new Hammer.Manager(touchpannel);
     var singleTap = new Hammer.Tap({event: 'singletap'});
@@ -122,18 +98,29 @@ var controller;
         }, 40);
     }
     var drawSeekRadial = function (seek) {
-        var direction = seek == 'ff' ? 'right' : 'left'
+
         var white = 50;
-        var timer = setInterval(function () {
-            touchpannel.style.width = '50%';
-            touchpannel.style.left = '50%';
+        touchpannel.style.width = '33%';
+        if(seek == 'ff') {
+            touchpannel.style.left = '67%';
             touchpannel.style.borderBottomLeftRadius = '200%';
             touchpannel.style.borderTopLeftRadius = '200%';
-            touchpannel.style.background = 'radial-gradient( circle at 100% 50%, rgba(255, 255,255, 0.7) '+white+'%, transparent 100%)';
+        }
+        else{
+            touchpannel.style.left = '0';
+            touchpannel.style.borderBottomRightRadius = '200%';
+            touchpannel.style.borderTopRightRadius = '200%';
+        }
+        var timer = setInterval(function () {
+            if(seek == 'ff') {
+                touchpannel.style.background = 'radial-gradient( circle at 100% 50%, rgba(255, 255,255, 0.5) ' + white + '%, transparent 100%)';
+            }
+            else {
+                touchpannel.style.background = 'radial-gradient( circle at 0% 50%, rgba(255, 255,255, 0.5) ' + white + '%, transparent 100%)';
+            }
             white += 10;
             if (white > 100) {
                 touchpannel.style.background = 'url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)';
-                touchpannel.style.paddingLeft = '0';
                 touchpannel.style.borderRadius = '0';
                 touchpannel.style.width = '100%';
                 touchpannel.style.left = '0';
@@ -148,7 +135,8 @@ var controller;
             drawSeekRadial('ff');
         } else {
             rw();
-            drawSeek('rw');
+            //drawSeek('rw');
+            drawSeekRadial('rw');
         }
     });
 
