@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="add custom_player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_player/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom_player/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_player/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,118 +89,6 @@
       <workItem from="1599625805186" duration="53000" />
       <workItem from="1599812639487" duration="1147000" />
       <workItem from="1599984899083" duration="25620000" />
-    </task>
-    <task id="LOCAL-00038" summary="change iframe size">
-      <created>1597903054497</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1597903054497</updated>
-    </task>
-    <task id="LOCAL-00039" summary="change iframe size">
-      <created>1597903400001</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1597903400001</updated>
-    </task>
-    <task id="LOCAL-00040" summary="change iframe size">
-      <created>1597903819702</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1597903819702</updated>
-    </task>
-    <task id="LOCAL-00041" summary="change iframe size">
-      <created>1599113254127</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1599113254127</updated>
-    </task>
-    <task id="LOCAL-00042" summary="add custom_player">
-      <created>1599165612531</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1599165612532</updated>
-    </task>
-    <task id="LOCAL-00043" summary="add custom_player">
-      <created>1599165759168</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1599165759168</updated>
-    </task>
-    <task id="LOCAL-00044" summary="add custom_player">
-      <created>1599166070929</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1599166070929</updated>
-    </task>
-    <task id="LOCAL-00045" summary="add custom_player">
-      <created>1599166136218</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1599166136219</updated>
-    </task>
-    <task id="LOCAL-00046" summary="add custom_player">
-      <created>1599166416874</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1599166416874</updated>
-    </task>
-    <task id="LOCAL-00047" summary="add custom_player">
-      <created>1599177830285</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1599177830285</updated>
-    </task>
-    <task id="LOCAL-00048" summary="add custom_player">
-      <created>1599180975775</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1599180975775</updated>
-    </task>
-    <task id="LOCAL-00049" summary="add custom_player">
-      <created>1599181131267</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1599181131267</updated>
-    </task>
-    <task id="LOCAL-00050" summary="add custom_player">
-      <created>1599181518456</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1599181518457</updated>
-    </task>
-    <task id="LOCAL-00051" summary="add custom_player">
-      <created>1599181865601</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1599181865601</updated>
-    </task>
-    <task id="LOCAL-00052" summary="add custom_player">
-      <created>1599181947948</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1599181947948</updated>
-    </task>
-    <task id="LOCAL-00053" summary="add custom_player">
-      <created>1599182124388</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1599182124388</updated>
     </task>
     <task id="LOCAL-00054" summary="add custom_player">
       <created>1599182337709</created>
@@ -435,7 +321,119 @@
       <option name="project" value="LOCAL" />
       <updated>1599813051473</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="add custom_player">
+      <created>1600040406788</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1600040406788</updated>
+    </task>
+    <task id="LOCAL-00088" summary="add custom_player">
+      <created>1600040541002</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1600040541002</updated>
+    </task>
+    <task id="LOCAL-00089" summary="add custom_player">
+      <created>1600042000503</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1600042000503</updated>
+    </task>
+    <task id="LOCAL-00090" summary="add custom_player">
+      <created>1600042247416</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1600042247416</updated>
+    </task>
+    <task id="LOCAL-00091" summary="add custom_player">
+      <created>1600042454358</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1600042454358</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add custom_player">
+      <created>1600042605177</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1600042605177</updated>
+    </task>
+    <task id="LOCAL-00093" summary="add custom_player">
+      <created>1600043025263</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1600043025263</updated>
+    </task>
+    <task id="LOCAL-00094" summary="add custom_player">
+      <created>1600043247601</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1600043247601</updated>
+    </task>
+    <task id="LOCAL-00095" summary="add custom_player">
+      <created>1600043432507</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1600043432507</updated>
+    </task>
+    <task id="LOCAL-00096" summary="add custom_player">
+      <created>1600044057082</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1600044057082</updated>
+    </task>
+    <task id="LOCAL-00097" summary="add custom_player">
+      <created>1600049231073</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1600049231073</updated>
+    </task>
+    <task id="LOCAL-00098" summary="add custom_player">
+      <created>1600049767665</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1600049767665</updated>
+    </task>
+    <task id="LOCAL-00099" summary="add custom_player">
+      <created>1600051032830</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1600051032830</updated>
+    </task>
+    <task id="LOCAL-00100" summary="add custom_player">
+      <created>1600051213678</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1600051213678</updated>
+    </task>
+    <task id="LOCAL-00101" summary="add custom_player">
+      <created>1600051509423</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1600051509423</updated>
+    </task>
+    <task id="LOCAL-00102" summary="add custom_player">
+      <created>1600051582436</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1600051582436</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,11 +475,11 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994389177" />
-    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1599113253438">
+    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1600051581773">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
-    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113253438" />
+    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1600051581773" />
     <state width="1899" height="376" key="GridCell.Tab.0.bottom" timestamp="1600031184533">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -546,22 +544,22 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="560" y="280" key="Vcs.Push.Dialog.v2" timestamp="1599813055080">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1600051584384">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599813055080" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
     <state x="2480" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599197930294" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1599113264005" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1600051584384" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="625" y="255" key="run.anything.popup/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597652357655" />
-    <state x="2051" y="235" width="695" height="678" key="search.everywhere.popup" timestamp="1599183691131">
-      <screen x="1920" y="0" width="1920" height="1080" />
+    <state x="189" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1600041314138">
+      <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="2051" y="235" width="695" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599183691131" />
-    <state x="189" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1597903371758" />
+    <state x="189" y="235" width="672" height="678" key="search.everywhere.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1600041314138" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
