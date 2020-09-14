@@ -56,8 +56,10 @@
             screenOrientation = funOri(window.orientation);
         });
     } else {
+        console.log('init orientation : ' + window.screen.orientation.angle);
         screenOrientation = funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
+            console.log('event orientation : ' + evt.currentTarget.angle)
             screenOrientation = funOri(evt.currentTarget.angle)
         });
     }
