@@ -377,11 +377,8 @@
                 controller.set_controls_activity(false);
                 controller.set_controls_inactive_time(9999999999999999);
                 setVolumeUI(controller.get_volume());
+                setNscreen();
                 showControlbar();
-                controller.set_enable_close_event();
-                controller.set_close_callback_fn(function(){
-                    alert('close');
-                });
             });
             controller.on('error', function (error_code) {
                 console.log(error_code);
