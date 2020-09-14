@@ -180,6 +180,9 @@
     }
 
     var fullscreen = function () {
+        if(screenOrientation === undefined){
+            return;
+        }
         if (screenOrientation === 'landscape') {
             wrapper.className = 'fullWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-expand');
