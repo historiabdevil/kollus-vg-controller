@@ -367,7 +367,7 @@
                     controller.set_jumpstep(this.value);
                 });
             bind_evt('nscreen_ok', function () {
-                controller.play();
+                controller.play(1);
                 controller.play(nscreen_position);
                 document.getElementById('nscreen_popup').style.display = 'none';
             });
