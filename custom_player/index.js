@@ -286,7 +286,7 @@
     var playerInitialize = function () {
         var nscreen_position;
         try {
-            var setNscreen = function(){
+            var setNscreen = function () {
                 var settings = {
                     "url": "https://api.kr.kollus.com/0/media_auth/nscreen/index?access_token=7ge80tfvz51x2606&media_content_key=FuYgfrvk&client_user_id=hdyang",
                     "method": "GET",
@@ -296,13 +296,13 @@
                 $.ajax(settings).done(function (response) {
                     controller.pause();
                     nscreen_position = response.result['last_position'];
-                    if(nscreen_position > 0){
+                    if (nscreen_position > 0) {
                         document.getElementById('nscreen_time').innerText = getTimeString(nscreen_position);
                         document.getElementById('nscreen_popup').style.display = 'block';
                     }
                 });
             }
-            var writeNscreen = function(){
+            var writeNscreen = function () {
                 var position = controller.get_progress().position;
                 var settings = {
                     "url": "https://api.kr.kollus.com/0/media_auth/nscreen/register?access_token=7ge80tfvz51x2606",
@@ -328,7 +328,6 @@
             });
 
 
-
             hideAllControlbar();
             bind_evt("setting", function () {
                 document.getElementById("setting_menu").style.display = "block";
@@ -345,12 +344,15 @@
                 function () {
                     controller.set_jumpstep(this.value);
                 });
-            bind_evt('nscreen_ok', function(){
+            bind_evt('nscreen_ok', function () {
                 //controller.play(0);
-                controller.play(nscreen_position);
+                setTimeout(function () {
+                    controller.play(nscreen_position);
+                }, 500)
+
                 document.getElementById('nscreen_popup').style.display = 'none';
             });
-            bind_evt('nscreen_cancel', function(){
+            bind_evt('nscreen_cancel', function () {
                 controller.play(0);
                 document.getElementById('nscreen_popup').style.display = 'none';
             });
