@@ -368,10 +368,7 @@
                 });
             bind_evt('nscreen_ok', function () {
                 //controller.play(0);
-                setTimeout(function () {
-                    controller.play(nscreen_position);
-                }, 500);
-
+                controller.play(nscreen_position);
                 document.getElementById('nscreen_popup').style.display = 'none';
             });
             bind_evt('nscreen_cancel', function () {
