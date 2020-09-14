@@ -51,21 +51,22 @@
     }
 
     if (typeof window.orientation == 'number' && typeof window.onorientationchange == 'object') {
-        screenOrientation = funOri(window.orientation);
+        funOri(window.orientation);
         console.log('init orientation : ' + screenOrientation);
         $(window).on('resize', function () {
-            screenOrientation = funOri(window.orientation);
+            funOri(window.orientation);
             console.log('event orientation : ' + screenOrientation);
         });
     } else {
         console.log('init orientation : ' + window.screen.orientation.angle);
-        screenOrientation = funOri(window.screen.orientation.angle);
+        funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
             console.log('event orientation : ' + evt.currentTarget.angle)
-            screenOrientation = funOri(evt.currentTarget.angle)
+            funOri(evt.currentTarget.angle)
         });
     }
     $(window).on('evtOri', function (event, orientaion) {
+        screenOrientation = orientaion;
         fullscreen();
     });
 
