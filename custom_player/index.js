@@ -62,11 +62,7 @@
         });
     }
     $(window).on('evtOri', function (event, orientaion) {
-        if (orientaion == 'landscape') {
-            fullscreen();
-        } else {
-
-        }
+        fullscreen();
     });
 
     /*
@@ -179,7 +175,7 @@
 
     var fullscreen = function () {
         if (screenOrientation == 'landscape' &&
-            document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
+            isFullscreen) {
             return;
         }
         if (document.querySelector('#fullscreen > i').classList.contains('fa-expand') > 0) {
@@ -188,12 +184,14 @@
             document.querySelector('#fullscreen > i').classList.add('fa-compress');
             wrapper.style.height = document.documentElement.clientHeight + 'px';
             wrapper.style.removeProperty('padding-bottom');
+            isFullscreen = true;
         } else if (document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
             wrapper.className = 'normalWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-compress');
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
             wrapper.style.height = ''
             // wrapper.style.removeProperty('padding-bottom');
+            isFullscreen = false;
         }
     }
 
