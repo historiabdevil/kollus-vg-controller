@@ -297,7 +297,7 @@
                     controller.pause();
                     nscreen_position = response.result['last_position'];
                     if(nscreen_position > 0){
-                        document.getElementById('nscreen_time').innerText = getTimeString(position);
+                        document.getElementById('nscreen_time').innerText = getTimeString(nscreen_position);
                         document.getElementById('nscreen_popup').style.display = 'block';
                     }
                 });
