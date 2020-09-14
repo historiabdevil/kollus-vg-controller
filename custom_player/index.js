@@ -230,7 +230,7 @@
     var playAndPause = function () {
         if (document.querySelector('#play > i').classList.contains('fa-play-circle') > 0) {
             hideAllControlbar();
-            controller.play();
+            controller.play(controller.get_progress().position);
             hideControlbar();
 
         } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
