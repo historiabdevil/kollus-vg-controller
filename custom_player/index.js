@@ -53,12 +53,12 @@
     if (typeof window.orientation == 'number' && typeof window.onorientationchange == 'object') {
         screenOrientation = funOri(window.orientation);
         $(window).on('resize', function () {
-            funOri(window.orientation);
+            screenOrientation = funOri(window.orientation);
         });
     } else {
         screenOrientation = funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
-            funOri(evt.currentTarget.angle)
+            screenOrientation = funOri(evt.currentTarget.angle)
         });
     }
     $(window).on('evtOri', function (event, orientaion) {
