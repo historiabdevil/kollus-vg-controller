@@ -22,7 +22,7 @@
             userAgent.toLowerCase().indexOf('ipad') > -1
         ){
             var $viewport = $('meta[name="viewport"]');
-            $viewport.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+            $viewport.attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1,0, user-scalable=0');
         }
         if (userAgent.toLowerCase().indexOf('edge') > -1) {
             return 'edge';
