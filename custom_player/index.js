@@ -63,6 +63,7 @@
         funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
             console.log('event orientation : ' + evt.currentTarget.angle)
+            alert('iOS Chrome : ' + evt.currentTarget.angle);
             funOri(evt.currentTarget.angle)
         });
     }
