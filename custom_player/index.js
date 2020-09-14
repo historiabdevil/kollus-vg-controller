@@ -327,6 +327,10 @@
                 controller.set_controls_inactive_time(9999999999999999);
                 setVolumeUI(controller.get_volume());
                 showControlbar();
+                controller.set_enable_close_event();
+                controller.set_close_callback_fn(function(){
+                    alert('close');
+                });
             });
             controller.on('error', function (error_code) {
                 console.log(error_code);
@@ -348,6 +352,7 @@
             });
             controller.on('muted', setMuteUI);
             controller.on('volumechange', setVolumeUI);
+
         } catch (e) {
             console.log(e);
         }
