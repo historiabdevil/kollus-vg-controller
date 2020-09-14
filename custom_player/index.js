@@ -20,13 +20,13 @@
     * */
 
     const browser = (function (userAgent) {
-        if(userAgent.toLowerCase().indexOf('iphone') > -1 ||
-            userAgent.toLowerCase().indexOf('ipad') > -1
-        ){
-            var $viewport = $('meta[name="viewport"]');
-            $viewport.attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1,0, user-scalable=0');
-            isIOS = true;
-        }
+        // if(userAgent.toLowerCase().indexOf('iphone') > -1 ||
+        //     userAgent.toLowerCase().indexOf('ipad') > -1
+        // ){
+        //     var $viewport = $('meta[name="viewport"]');
+        //     $viewport.attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1,0, user-scalable=0');
+        //     isIOS = true;
+        // }
         if (userAgent.toLowerCase().indexOf('edge') > -1) {
             return 'edge';
         } else if (userAgent.toLowerCase().indexOf('whale') > -1) {
