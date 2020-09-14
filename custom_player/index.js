@@ -295,8 +295,8 @@
 
                 $.ajax(settings).done(function (response) {
                     controller.pause();
-                    nscreen_position = JSON.parse(response).result['last_position'];
-                    if(position > 0){
+                    nscreen_position = response.result['last_position'];
+                    if(nscreen_position > 0){
                         document.getElementById('nscreen_time').innerText = getTimeString(position);
                         document.getElementById('nscreen_popup').style.display = 'block';
                     }
