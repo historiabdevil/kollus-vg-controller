@@ -284,12 +284,50 @@
 
 
     var playerInitialize = function () {
+        var nscreen_position;
         try {
+            var setNscreen = function(){
+                var settings = {
+                    "url": "https://api.kr.kollus.com/0/media_auth/nscreen/index?access_token=7ge80tfvz51x2606&media_content_key=FuYgfrvk&client_user_id=hdyang",
+                    "method": "GET",
+                    "timeout": 0,
+                };
 
+                $.ajax(settings).done(function (response) {
+                    controller.pause();
+                    nscreen_position = JSON.parse(response).result['last_position'];
+                    if(position > 0){
+                        document.getElementById('nscreen_time').innerText = getTimeString(position);
+                        document.getElementById('nscreen_popup').style.display = 'block';
+                    }
+                });
+            }
+            var writeNscreen = function(){
+                var position = controller.get_progress().position;
+                var settings = {
+                    "url": "https://api.kr.kollus.com/0/media_auth/nscreen/register?access_token=7ge80tfvz51x2606",
+                    "method": "POST",
+                    "timeout": 0,
+                    "headers": {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    "data": {
+                        "media_content_key": "FuYgfrvk",
+                        "client_user_id": "hdyang",
+                        "position": position
+                    }
+                };
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+            }
             $(window).on('unload', function (e) {
                 e.preventDefault();
-                console.log('close');
+                writeNscreen();
             });
+
+
 
             hideAllControlbar();
             bind_evt("setting", function () {
@@ -307,7 +345,14 @@
                 function () {
                     controller.set_jumpstep(this.value);
                 });
-
+            bind_evt('nscreen_ok', function(){
+                controller.play(nscreen_position);
+                document.getElementById('nscreen_popup').style.display = 'none';
+            });
+            bind_evt('nscreen_cancel', function(){
+                controller.play(0);
+                document.getElementById('nscreen_popup').style.display = 'none';
+            });
 
             //플레이어 커스텀 버튼 이벤트 연동
             bind_evt("play", playAndPause);
@@ -352,9 +397,11 @@
                 showControlbar()
                 document.querySelector('#play > i').classList.remove('fa-pause-circle')
                 document.querySelector('#play > i').classList.add('fa-play-circle')
+                writeNscreen();
             });
             controller.on('progress', setProgressUI);
             controller.on('done', function () {
+                writeNscreen();
             });
             controller.on('muted', setMuteUI);
             controller.on('volumechange', setVolumeUI);
