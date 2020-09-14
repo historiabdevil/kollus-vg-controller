@@ -18,7 +18,7 @@
     * 브라우저 판별
     * */
     const browser = (function (userAgent) {
-        if(userAgent.toLowerCase().indexOf('ios') > -1 ||
+        if(userAgent.toLowerCase().indexOf('iphone') > -1 ||
             userAgent.toLowerCase().indexOf('ipad') > -1
         ){
             var $viewport = $('head meta[name="viewport"]');
