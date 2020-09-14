@@ -20,7 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac71c435-d06c-4095-a4cc-d1a3ecd4a7af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/kollus-vg-controller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kollus-vg-controller.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_player/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom_player/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom_player/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/custom_player/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,13 +92,6 @@
       <workItem from="1599625805186" duration="53000" />
       <workItem from="1599812639487" duration="1147000" />
       <workItem from="1599984899083" duration="25620000" />
-    </task>
-    <task id="LOCAL-00082" summary="add custom_player">
-      <created>1599196131802</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1599196131802</updated>
     </task>
     <task id="LOCAL-00083" summary="add custom_player">
       <created>1599196218682</created>
@@ -433,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600063736899</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="add custom_player">
+      <created>1600063863563</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1600063863563</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,11 +478,15 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/84.1080.1680.1050/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599994389177" />
-    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1600063736263">
+    <state x="721" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600070357423">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="721" y="286" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1858.1080@62.0.1858.1080" timestamp="1600070357423" />
+    <state x="611" y="115" key="CommitChangelistDialog2" timestamp="1600063862775">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="567" y="115" key="CommitChangelistDialog2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653437764" />
-    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1600063736263" />
+    <state x="611" y="115" key="CommitChangelistDialog2/62.0.1858.1080@62.0.1858.1080" timestamp="1600063862775" />
     <state width="1899" height="376" key="GridCell.Tab.0.bottom" timestamp="1600031184533">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -544,13 +551,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="469" y="179" key="SettingsEditor/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597653241028" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1600063741059">
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2" timestamp="1600063864630">
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1599813055080" />
     <state x="560" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1597654905308" />
     <state x="2480" y="280" key="Vcs.Push.Dialog.v2/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599197930294" />
-    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1600063741059" />
+    <state x="604" y="280" key="Vcs.Push.Dialog.v2/62.0.1858.1080@62.0.1858.1080" timestamp="1600063864630" />
+    <state x="448" y="146" width="584" height="804" key="find.popup" timestamp="1600070884793">
+      <screen x="62" y="0" width="1858" height="1080" />
+    </state>
+    <state x="448" y="146" width="584" height="804" key="find.popup/62.0.1858.1080@62.0.1858.1080" timestamp="1600070884793" />
     <state x="625" y="255" key="run.anything.popup" timestamp="1597652357655">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

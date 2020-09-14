@@ -79,6 +79,7 @@
         console.log('init orientation : ' + window.screen.orientation.angle);
         funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
+            alert('raise')
             console.log('event orientation : ' + evt.currentTarget.angle)
             alert('iOS Chrome : ' + evt.currentTarget.angle);
             funOri(evt.currentTarget.angle)
@@ -424,6 +425,13 @@
             });
             controller.on('muted', setMuteUI);
             controller.on('volumechange', setVolumeUI);
+            controller.on('seeking', function(){
+                console.log('seeking');
+            });
+            controller.on('seeked', function(){
+                console.log('seeked');
+                controller.play();
+            });
 
         } catch (e) {
             console.log(e);
