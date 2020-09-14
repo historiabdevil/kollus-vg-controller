@@ -21,7 +21,7 @@
         if(userAgent.toLowerCase().indexOf('iphone') > -1 ||
             userAgent.toLowerCase().indexOf('ipad') > -1
         ){
-            var $viewport = $('head meta[name="viewport"]');
+            var $viewport = $('head > meta[name="viewport"]');
             $viewport.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
         }
         if (userAgent.toLowerCase().indexOf('edge') > -1) {
