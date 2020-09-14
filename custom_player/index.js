@@ -18,6 +18,12 @@
     * 브라우저 판별
     * */
     const browser = (function (userAgent) {
+        if(userAgent.toLowerCase().indexOf('ios') > -1 ||
+            userAgent.toLowerCase().indexOf('ipad') > -1
+        ){
+            var $viewport = $('head meta[name="viewport"]');
+            $viewport.attr('content', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+        }
         if (userAgent.toLowerCase().indexOf('edge') > -1) {
             return 'edge';
         } else if (userAgent.toLowerCase().indexOf('whale') > -1) {
