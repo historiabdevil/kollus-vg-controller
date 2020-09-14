@@ -285,6 +285,12 @@
 
     var playerInitialize = function () {
         try {
+
+            $(window).on('unload', function (e) {
+                e.preventDefault();
+                console.log('close');
+            });
+
             hideAllControlbar();
             bind_evt("setting", function () {
                 document.getElementById("setting_menu").style.display = "block";
