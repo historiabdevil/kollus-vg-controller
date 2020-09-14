@@ -5,6 +5,7 @@
 
     var isFullscreen = false;
     var screenOrientation;
+    var isIos;
     var wrapper = document.getElementById('wrapper');
     var touchpannel = document.getElementById('touchpannel');
     var controls = document.getElementById('controls');
@@ -17,12 +18,14 @@
     /*
     * 브라우저 판별
     * */
+
     const browser = (function (userAgent) {
         if(userAgent.toLowerCase().indexOf('iphone') > -1 ||
             userAgent.toLowerCase().indexOf('ipad') > -1
         ){
             var $viewport = $('meta[name="viewport"]');
             $viewport.attr('content', 'width=device-width, initial-scale=1.0, maximum-scale=1,0, user-scalable=0');
+            isIOS = true;
         }
         if (userAgent.toLowerCase().indexOf('edge') > -1) {
             return 'edge';
@@ -47,12 +50,20 @@
     * */
     const funOri = function (angle) {
         var ori;
-        if (angle == 90 || angle == -90) {
-            ori = 'landscape'
+        if(isIos){
+            var w = window.document.documentElement.clientWidth;
+            var h = window.document.documentElement.clientHeight;
+            ori = w > h ? 'landscape': 'portrait';
+        }else {
+            if (angle == 90 || angle == -90) {
+                ori = 'landscape'
 
-        } else {
-            ori = 'portrait'
+            } else {
+                ori = 'portrait'
+            }
+
         }
+
         $(window).trigger('evtOri', [ori]);
         return ori;
     }
