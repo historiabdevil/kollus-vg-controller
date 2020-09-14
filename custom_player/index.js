@@ -32,21 +32,13 @@
             return 'ie';
         }
     })(window.navigator.userAgent);
+
     /*디바이스 Orientation Check event
     * window.orientation의 경우 deprecated 되고
     * window.screen 객체를 이용하여 orientation 변경 이벤트를 받아야 하나
     * ios safari의 경우에는 지원하지 않음 따라서 window.orientation을 사용 해야함
     * deviceorientation event를 사용 해야 할경우에는 SSL 이 적용 되어 있는 페이지여야 함.
     * */
-
-    function deferIframe() {
-        var iframeElem = document.getElementsByTagName('iframe');
-        for ( var i = 0; i < iframeElem.length; i++ ) {
-            if(iframeElem[i].getAttribute('data-src')) {
-                iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
-            }
-        }
-    }
     const funOri = function (angle) {
         var ori;
         if (angle == 90 || angle == -90) {
@@ -420,10 +412,7 @@
         }
 
     }
-    deferIframe();
-    $('player').on('load', function(){
-        playerInitialize();
-    });
+    playerInitialize();
 
 
 })(jQuery, window);
