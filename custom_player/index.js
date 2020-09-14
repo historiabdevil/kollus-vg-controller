@@ -38,6 +38,15 @@
     * ios safari의 경우에는 지원하지 않음 따라서 window.orientation을 사용 해야함
     * deviceorientation event를 사용 해야 할경우에는 SSL 이 적용 되어 있는 페이지여야 함.
     * */
+
+    function deferIframe() {
+        var iframeElem = document.getElementsByTagName('iframe');
+        for ( var i = 0; i < iframeElem.length; i++ ) {
+            if(iframeElem[i].getAttribute('data-src')) {
+                iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
+            }
+        }
+    }
     const funOri = function (angle) {
         var ori;
         if (angle == 90 || angle == -90) {
@@ -348,7 +357,7 @@
                 //controller.play(0);
                 setTimeout(function () {
                     controller.play(nscreen_position);
-                }, 500)
+                }, 500);
 
                 document.getElementById('nscreen_popup').style.display = 'none';
             });
@@ -411,7 +420,10 @@
         }
 
     }
+    deferIframe();
+    $('player').on('load', function(){
+        playerInitialize();
+    });
 
-    playerInitialize();
 
 })(jQuery, window);
