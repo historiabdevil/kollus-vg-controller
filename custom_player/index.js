@@ -232,7 +232,6 @@
             hideAllControlbar();
             controller.play(controller.get_progress().position);
             hideControlbar();
-
         } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
             controller.pause();
             hideControlbar();
