@@ -1,10 +1,10 @@
-
 !(function ($, window) {
     // variable initialize
     var controller;
     var showTimeControlbar = 5; //seconds
 
     var isFullscreen = false;
+    var screenOrientation;
     var wrapper = document.getElementById('wrapper');
     var touchpannel = document.getElementById('touchpannel');
     var controls = document.getElementById('controls');
@@ -39,26 +39,33 @@
     * deviceorientation event를 사용 해야 할경우에는 SSL 이 적용 되어 있는 페이지여야 함.
     * */
     const funOri = function (angle) {
+        var ori;
         if (angle == 90 || angle == -90) {
-            $(window).trigger('evtOri', ['landscape']);
+            ori = 'landscape'
+
         } else {
-            $(window).trigger('evtOri', ['portrait']);
+            ori = 'portrait'
         }
+        $(window).trigger('evtOri', [ori]);
+        return ori;
     }
+
     if (typeof window.orientation == 'number' && typeof window.onorientationchange == 'object') {
+        screenOrientation = funOri(window.orientation);
         $(window).on('resize', function () {
             funOri(window.orientation);
         });
     } else {
+        screenOrientation = funOri(window.screen.orientation.angle);
         $(window.screen.orientation).on('change', function (evt) {
             funOri(evt.currentTarget.angle)
         });
     }
     $(window).on('evtOri', function (event, orientaion) {
-        alert(orientaion + ' ' + document.documentElement.clientHeight );
-        if(isFullscreen || orientaion == 'landscape'){
-            wrapper.style.height = document.documentElement.clientHeight + 'px';
-            wrapper.style.paddingBottom = '0';
+        if (orientaion == 'landscape') {
+            fullscreen();
+        } else {
+
         }
     });
 
@@ -101,21 +108,19 @@
 
         var white = 50;
         touchpannel.style.width = '33%';
-        if(seek == 'ff') {
+        if (seek == 'ff') {
             touchpannel.style.left = '67%';
             touchpannel.style.borderBottomLeftRadius = '200%';
             touchpannel.style.borderTopLeftRadius = '200%';
-        }
-        else{
+        } else {
             touchpannel.style.left = '0';
             touchpannel.style.borderBottomRightRadius = '200%';
             touchpannel.style.borderTopRightRadius = '200%';
         }
         var timer = setInterval(function () {
-            if(seek == 'ff') {
+            if (seek == 'ff') {
                 touchpannel.style.background = 'radial-gradient( circle at 100% 50%, rgba(255, 255,255, 0.5) ' + white + '%, transparent 100%)';
-            }
-            else {
+            } else {
                 touchpannel.style.background = 'radial-gradient( circle at 0% 50%, rgba(255, 255,255, 0.5) ' + white + '%, transparent 100%)';
             }
             white += 10;
@@ -173,14 +178,22 @@
     }
 
     var fullscreen = function () {
+        if (screenOrientation == 'landscape' &&
+            document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
+            return;
+        }
         if (document.querySelector('#fullscreen > i').classList.contains('fa-expand') > 0) {
             wrapper.className = 'fullWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-expand');
             document.querySelector('#fullscreen > i').classList.add('fa-compress');
+            wrapper.style.height = document.documentElement.clientHeight + 'px';
+            wrapper.style.removeProperty('padding-bottom');
         } else if (document.querySelector('#fullscreen > i').classList.contains('fa-compress') > 0) {
             wrapper.className = 'normalWrapper';
             document.querySelector('#fullscreen > i').classList.remove('fa-compress');
             document.querySelector('#fullscreen > i').classList.add('fa-expand');
+            wrapper.style.height = ''
+            // wrapper.style.removeProperty('padding-bottom');
         }
     }
 
@@ -193,7 +206,6 @@
         } else if (document.querySelector('#play > i').classList.contains('fa-pause-circle') > 0) {
             controller.pause();
             hideControlbar();
-
         }
     }
     var rw = function () {
